@@ -441,7 +441,7 @@ template {
       -ms-flex-pack: center;
           justify-content: center;
   padding-top: 100px;
-  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
+  background: #131313 url("../../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #fff;
 }
