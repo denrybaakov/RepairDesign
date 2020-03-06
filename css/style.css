@@ -332,7 +332,8 @@ template {
     transition: box-shadow 0.3s;
     transition: background-color 0.3s; }
     .button--primary:hover {
-      background-color: #FED087;
+      color: #131313;
+      background-color: #FFE7C1;
       box-shadow: none; }
   .button--outline {
     border: 1px solid #fff;
