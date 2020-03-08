@@ -31,7 +31,7 @@ function bs() {
 // sass
 function serveSass() {
   return src("./sass/**/*.sass", "./sass/**/*.scss")
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       cascade: false
     }))

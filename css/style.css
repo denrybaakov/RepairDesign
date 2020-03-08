@@ -363,9 +363,10 @@ body {
 
 .section-title {
   font-family: 'Yeseva One', cursive, serif;
-  font-weight: 400;
   text-align: center;
   text-transform: uppercase; }
+  .section-title__heading {
+    font-weight: 400; }
   .section-title__image {
     display: flex;
     align-items: center;
@@ -375,6 +376,7 @@ body {
       margin: 0 10px;
       width: 32px;
       height: 2px;
+      border-radius: 2px;
       background-color: #E3B873; }
 
 .header {
