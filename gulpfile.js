@@ -19,7 +19,9 @@ function bs() {
   browserSync.init({
     server: {
       baseDir: "./"
-    }
+    },
+    browser: 'google chrome',
+    notify: false
   });
   watch("./*.html").on('change', browserSync.reload);
   watch("./sass/**/*.sass", serveSass);
