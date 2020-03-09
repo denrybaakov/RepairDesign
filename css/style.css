@@ -518,6 +518,10 @@ body {
   .title--primary {
     color: #E3B873; }
 
+@media screen and (min-width: 1200px) {
+  .nav__item {
+    margin-right: 2.3rem; } }
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
