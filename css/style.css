@@ -487,6 +487,11 @@ body {
       border: 2px solid #E3B873;
       border-radius: 50%;
       background: url(../img/arrowDown.svg) no-repeat center center; }
+  .hero .scroll-down {
+    font-family: 'Yeseva One';
+    font-weight: 400;
+    font-size: 0.85rem;
+    line-height: 2px; }
 
 .instagram {
   display: flex;
