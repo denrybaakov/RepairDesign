@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'Futura Book';
   src: url("../fonts/futura/FuturaBookC.woff") format("woff"), url("../fonts/futura/FuturaBookC.woff2") format("woff");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: wrap; }
 
 @font-face {
   font-family: 'Futura Demi';
   src: url("../fonts/futura/FuturaDemiC.woff") format("woff"), url("../fonts/futura/FuturaDemiC.woff2") format("woff");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: wrap; }
 
@@ -319,7 +319,7 @@ template {
   display: none; }
 
 .button {
-  padding: 13px 20px;
+  padding: 11px 24px;
   font-size: 0.93rem;
   text-transform: uppercase;
   border: none;
@@ -359,7 +359,7 @@ template {
   box-sizing: border-box; }
 
 html {
-  font-size: 1rem; }
+  font-size: 14px; }
 
 body {
   font-family: 'Futura Book', sans-serif;
@@ -398,19 +398,24 @@ body {
   align-items: center; }
 
 .logo {
+  letter-spacing: 0.48px;
   text-transform: uppercase; }
   .logo__link {
+    font-weight: 600;
     color: #E3B873;
     text-decoration: none; }
     .logo__link:hover {
       text-decoration: underline; }
 
 .nav__item {
-  margin-right: 2.86rem;
+  margin-right: 2.6rem;
   text-transform: uppercase;
   text-decoration: none;
+  letter-spacing: 0;
   color: #fff;
   transition: color 0.3s; }
+  .nav__item:last-child {
+    margin-right: 0; }
   .nav__item:hover {
     color: #E3B873; }
 
@@ -447,12 +452,20 @@ body {
     position: relative;
     max-width: 47.85rem;
     margin-left: 4.28rem; }
+  .hero__title {
+    margin: 0 0 1.1rem 0; }
   .hero__text {
-    font-size: 1.571rem;
+    font-family: 'Futura Book';
+    margin: 0 0 3.4rem 0;
     max-width: 500px;
+    font-size: 1.571rem;
+    line-height: 131%;
     font-weight: 400; }
   .hero__button {
-    margin-right: 20px; }
+    margin-right: 16px;
+    padding: 19px 28px; }
+  .hero .button--outline {
+    padding: 17px 46px; }
   .hero__scroll-down {
     position: absolute;
     left: 0;
@@ -461,7 +474,7 @@ body {
     justify-content: center;
     align-items: center;
     min-width: 17.64rem;
-    min-height: 97px;
+    min-height: 6.92rem;
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
@@ -484,6 +497,7 @@ body {
     display: flex;
     align-items: center;
     text-transform: uppercase;
+    font-size: 1.1rem;
     line-height: 0.8;
     color: #E3B873;
     text-decoration: none;
@@ -496,9 +510,9 @@ body {
       background-color: #E3B873; }
 
 .title {
-  margin: 0;
   font-family: 'Yeseva One', cursive;
   font-size: 2.857rem;
+  line-height: 1.4;
   font-weight: 400;
   text-transform: uppercase; }
   .title--primary {
@@ -518,7 +532,11 @@ body {
   .hero__content {
     margin-left: 0; } }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-height: 620px) {
+  .hero__scroll-down {
+    display: none; } }
+
+@media screen and (max-width: 576px) {
   .contacts__button {
     display: none; }
   .contacts__phone {
@@ -526,9 +544,11 @@ body {
     color: #fff;
     text-decoration: none; }
   .title {
+    margin-bottom: 1.14rem;
     font-size: 1.64rem; }
   .hero__content {
-    max-width: 22.86rem; }
+    max-width: 22.86rem;
+    margin: 0 auto; }
   .hero__text {
     font-size: 1.29rem;
     margin-bottom: 2.28rem; }
@@ -537,8 +557,6 @@ body {
     min-width: 22.86rem;
     margin-bottom: 1.85rem; }
   .hero__scroll-down {
-    display: none; } }
-
-@media screen and (max-height: 620px) {
-  .hero__scroll-down {
-    display: none; } }
+    display: none; }
+  .button {
+    padding: 19px 69px; } }

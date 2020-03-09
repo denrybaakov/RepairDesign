@@ -14,7 +14,12 @@
     &__content
       margin-left: 0
 
-@media screen and (max-width: 570px)
+@media screen and (max-height: 620px)
+  .hero
+    &__scroll-down
+      display: none
+
+@media screen and (max-width: 576px)
   .contacts
     &__button
       display: none
@@ -23,10 +28,12 @@
       color: $light
       text-decoration: none
   .title
+    margin-bottom: 1.14rem
     font-size: 1.64rem
   .hero
     &__content
       max-width: 22.86rem
+      margin: 0 auto
     &__text
       font-size: 1.29rem
       margin-bottom: 2.28rem
@@ -36,7 +43,6 @@
       margin-bottom: 1.85rem
     &__scroll-down
       display: none
-@media screen and (max-height: 620px)
-  .hero
-    &__scroll-down
-      display: none
+
+  .button
+    padding: 19px 69px

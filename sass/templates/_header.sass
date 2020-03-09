@@ -13,8 +13,10 @@
   align-items: center
 
 .logo
+  letter-spacing: 0.48px
   text-transform: uppercase
   &__link
+    font-weight: 600
     color: $primary
     text-decoration: none
     &:hover
@@ -22,11 +24,14 @@
 
 .nav
   &__item
-    margin-right: 2.86rem //fixed!
+    margin-right: 2.6rem //fixed!
     text-transform: uppercase
     text-decoration: none
+    letter-spacing: 0
     color: $light
     transition: color 0.3s
+    &:last-child
+      margin-right: 0
     &:hover
       color: $primary
 
