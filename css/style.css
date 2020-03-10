@@ -333,6 +333,7 @@ html {
 
 body {
   font-family: 'Futura Book', sans-serif;
+  font-weight: 400;
   font-size: 1rem; }
 
 img {
@@ -341,12 +342,12 @@ img {
 .section {
   padding: 70px 0; }
   .section-title {
-    font-family: 'Yeseva One Regular', cursive, serif;
     text-align: center;
     text-transform: uppercase; }
     .section-title__heading {
-      font-size: 1.42rem;
+      font-family: 'Yeseva One Regular', serif;
       font-weight: 400;
+      font-size: 1.42rem;
       letter-spacing: 0; }
     .section-title__image {
       display: flex;
@@ -361,8 +362,8 @@ img {
         background-color: #E3B873; }
   .section-description {
     font-family: 'Futura Book', sans-serif;
-    font-size: 20px;
     font-weight: 400;
+    font-size: 20px;
     line-height: 27px;
     color: #131313; }
 
@@ -421,7 +422,7 @@ img {
   letter-spacing: 0;
   text-transform: uppercase; }
   .logo__link {
-    font-family: 'Futura Demi';
+    font-family: 'Futura Demi', sans-serif;
     font-weight: 400;
     color: #E3B873;
     text-decoration: none; }
@@ -513,7 +514,7 @@ img {
     .hero__scroll-down:hover {
       color: #E3B873; }
   .hero .scroll-down {
-    font-family: 'Yeseva One Regular', cursive, serif;
+    font-family: 'Yeseva One Regular', serif;
     font-weight: 400;
     font-size: 0.85rem;
     line-height: 2px; }
@@ -543,7 +544,8 @@ img {
       background-color: #E3B873; }
 
 .title {
-  font-family: 'Yeseva One Regular', cursive, serif;
+  font-family: 'Yeseva One Regular', serif;
+  font-weight: 400;
   font-size: 2.857rem;
   line-height: 132%;
   font-weight: 400;
@@ -573,7 +575,7 @@ img {
     background-color: #fff;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
   .card__title {
-    font-family: 'Yeseva One Regular', cursive, serif;
+    font-family: 'Yeseva One Regular', serif;
     font-weight: 400;
     font-size: 1.29rem;
     margin-top: 0;
@@ -590,7 +592,7 @@ img {
     bottom: -1.79rem;
     padding: 1.214rem 2.9rem;
     font-size: 1.29rem;
-    font-family: 'Yeseva One Regular', cursive, serif;
+    font-family: 'Yeseva One Regular', serif;
     font-weight: 400;
     text-transform: uppercase;
     color: #fff;
@@ -626,7 +628,7 @@ img {
     background-color: #fff;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
   .design-card__title {
-    font-family: 'Yeseva One Regular', cursive, serif;
+    font-family: 'Yeseva One Regular', serif;
     font-weight: 400;
     font-size: 1.29rem;
     margin-top: 0;
@@ -643,7 +645,7 @@ img {
     bottom: -1.79rem;
     padding: 1.214rem 5.6rem 1.214rem 2.5rem;
     font-size: 1.29rem;
-    font-family: 'Yeseva One Regular', cursive, serif;
+    font-family: 'Yeseva One Regular', serif;
     font-weight: 400;
     text-transform: uppercase;
     color: #fff;
