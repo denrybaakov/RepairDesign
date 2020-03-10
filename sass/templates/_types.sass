@@ -42,10 +42,16 @@
     text-transform: uppercase
     color: $light
     background-color: $primary
+    cursor: pointer
+    transition: 0.5s
+    transition: color 0.8s
     &--second
       padding: 1.214rem 2.6rem
     &--last
       padding: 1.214rem 2.5rem
+    &:hover
+      background-color: #FFE7C1
+      color: $dark
 
 @media screen and (max-width: 760px)
   .row
