@@ -575,13 +575,17 @@ img {
     position: absolute;
     left: 0;
     bottom: -1.79rem;
-    padding: 1.214rem 2.6rem;
+    padding: 1.214rem 2.9rem;
     font-size: 1.29rem;
     font-family: 'Yeseva One', cursive, sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     color: #fff;
     background-color: #E3B873; }
+    .card__pricetag--second {
+      padding: 1.214rem 2.6rem; }
+    .card__pricetag--last {
+      padding: 1.214rem 2.5rem; }
 
 @media screen and (max-width: 760px) {
   .row {
@@ -608,15 +612,18 @@ img {
   .hero__instagram {
     display: none; }
   .hero__content {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .card__text {
+    max-width: 18.87rem; } }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 767px) {
   .row {
     flex-direction: column;
     align-items: center; }
   .types__card {
     margin-bottom: 5rem; }
   .card__text {
+    max-width: 23.57rem;
     margin-left: 0; } }
 
 @media screen and (max-height: 620px) {
