@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function (event) {
 
   const modal = document.querySelector('.modal');
-  modalDialog = document.querySelector('.modal__dialog');
+  const modalDialog = document.querySelector('.modal__dialog');
   const modalBtn = document.querySelectorAll('[data-toggle=modal]');
   const closeBtn = document.querySelector('.modal__close');
 
@@ -16,10 +16,18 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 
 
+  modal.addEventListener('click', () => {
+
+    console.log('click dd')
+  });
 
 
+  modalDialog.addEventListener('click', function () {
+    console.log('clickModal')
+  });
 
-
+  console.log(modal)
+  console.log(modalDialog)
 
 
 

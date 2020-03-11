@@ -740,6 +740,8 @@ img {
     background: transparent url(../img/x-circle.svg) no-repeat center;
     border: none;
     cursor: pointer; }
+    .modal__close:focus {
+      outline: none; }
     .modal__close:hover {
       background: transparent url(../img/x-circle2.svg) no-repeat center; }
   .modal__title {
@@ -754,6 +756,8 @@ img {
     align-self: flex-start; }
   .modal__input {
     margin-bottom: 3.482rem; }
+    .modal__input:focus {
+      outline: none; }
     .modal__input:last-of-type {
       margin-bottom: 1rem; }
   .modal__policy {
@@ -848,5 +852,10 @@ img {
     display: none; }
   .button {
     padding: 19px 69px; }
-  .design__section-description {
-    font-size: 1.2rem; } }
+  .design {
+    background-color: #131313; }
+    .design__section-title {
+      color: #fff; }
+    .design__section-description {
+      color: #fff;
+      font-size: 1.2rem; } }
