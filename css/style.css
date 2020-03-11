@@ -325,6 +325,88 @@ template {
 [hidden] {
   display: none; }
 
+.button {
+  padding: 11px 24px;
+  font-size: 0.93rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px; }
+  .button:hover {
+    cursor: pointer; }
+  .button--primary {
+    background-color: #E3B873;
+    color: #fff;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    transition: box-shadow 0.3s;
+    transition: background-color 0.3s;
+    transition: color 0.5s; }
+    .button--primary:hover {
+      color: #131313;
+      background-color: #FFE7C1;
+      box-shadow: none; }
+  .button--outline {
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    transition: 0.4s; }
+    .button--outline:hover {
+      color: #131313;
+      background-color: #fff; }
+
+.label {
+  font-family: 'Futura Book', sans-serif;
+  font-weight: 400;
+  font-size: 1.07rem; }
+  .label--light {
+    color: rgba(255, 255, 255, 0.5); }
+
+.input {
+  padding: 0.5rem 0;
+  font-size: 1.285rem;
+  color: #fff;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3); }
+  .input::-webkit-input-placeholder {
+    color: #fff; }
+  .input::-moz-placeholder {
+    color: #fff; }
+  .input:-ms-input-placeholder {
+    color: #fff; }
+  .input::-ms-input-placeholder {
+    color: #fff; }
+  .input::placeholder {
+    color: #fff; }
+
+.policy__checkbox {
+  opacity: 0;
+  visibility: hidden; }
+  .policy__checkbox:checked + .policy__label::before {
+    background: #E3B873 url(../img/check.svg) no-repeat center/0.9rem; }
+
+.policy__label {
+  display: flex;
+  align-items: center;
+  font-family: 'Futura Book', sans-serif;
+  font-weight: 400; }
+  .policy__label::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    margin-right: 0.60rem;
+    border: 1px solid #E3B873;
+    border-radius: 2px;
+    cursor: pointer; }
+
+.container {
+  max-width: 1256px;
+  width: 85%;
+  margin: 0 auto; }
+
+.block {
+  -webkit-animation: show 2s easy 2s infinite;
+  animation: show 2s easy 2s infinite; }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -366,43 +448,6 @@ img {
     font-size: 20px;
     line-height: 27px;
     color: #131313; }
-
-.button {
-  padding: 11px 24px;
-  font-size: 0.93rem;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 2px; }
-  .button:hover {
-    cursor: pointer; }
-  .button--primary {
-    background-color: #E3B873;
-    color: #fff;
-    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-    transition: box-shadow 0.3s;
-    transition: background-color 0.3s;
-    transition: color 0.5s; }
-    .button--primary:hover {
-      color: #131313;
-      background-color: #FFE7C1;
-      box-shadow: none; }
-  .button--outline {
-    border: 1px solid #fff;
-    color: #fff;
-    background-color: transparent;
-    transition: 0.4s; }
-    .button--outline:hover {
-      color: #131313;
-      background-color: #fff; }
-
-.container {
-  max-width: 1256px;
-  width: 85%;
-  margin: 0 auto; }
-
-.block {
-  -webkit-animation: show 2s easy 2s infinite;
-  animation: show 2s easy 2s infinite; }
 
 .header {
   position: fixed;
@@ -660,6 +705,56 @@ img {
     .design-card__pricetag:hover {
       background-color: #FFE7C1;
       color: #131313; }
+
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(19, 19, 19, 0.6);
+  z-index: 199; }
+  .modal__dialog {
+    position: relative;
+    max-width: 36.36rem;
+    padding: 2.357rem 3.5rem 1.928rem;
+    color: #fff;
+    background: #131313 url(../img/bg-lines.svg) no-repeat center; }
+  .modal__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    margin: 12px;
+    background: transparent url(../img/x-circle.svg) no-repeat center;
+    border: none;
+    cursor: pointer; }
+    .modal__close:hover {
+      background: transparent url(../img/x-circle2.svg) no-repeat center; }
+  .modal__title {
+    margin: 0 0 2.428rem 0;
+    font-family: 'Yeseva One Regular', serif;
+    font-weight: 400;
+    font-size: 1.356rem;
+    text-align: center; }
+  .modal__form {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start; }
+  .modal__input {
+    margin-bottom: 3.482rem; }
+    .modal__input:last-of-type {
+      margin-bottom: 1rem; }
+  .modal__policy {
+    margin-bottom: 2.7rem; }
+  .modal__button {
+    align-self: flex-end; }
 
 @media screen and (max-width: 1200px) {
   html {
