@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function (event) {
 
   const modal = document.querySelector('.modal');
+  const closeModal = document.querySelector('[data-modal=close]')
   const modalDialog = document.querySelector('.modal__dialog');
   const modalBtn = document.querySelectorAll('[data-toggle=modal]');
   const closeBtn = document.querySelector('.modal__close');
@@ -16,23 +17,29 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 
 
-  modal.addEventListener('click', () => {
+  // modal.addEventListener('click', (e) => {
+  //   if (e.target.className == '.modal__dialog') {
+  //     console.log('click');
+  //   } else if (e.target.className == 'modal--visible') {
+  //     console.log(' жуть муть дуть')
+  //   } else {
+  //     console.log('err')
+  //   }
 
-    console.log('click dd')
-  });
-
-
-  modalDialog.addEventListener('click', function () {
-    console.log('clickModal')
-  });
-
-  console.log(modal)
-  console.log(modalDialog)
+  // });
 
 
 
 
+  // console.log(modal)
+  // console.log(modalDialog)
 
+
+
+
+  // closeModal.addEventListener('click', () => {
+  //   console.log('click to ne modal')
+  // })
 
 
 
@@ -42,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   document.addEventListener('keydown', event => {
     if (event.keyCode === 27) {
-      switchModal();
+      modal.classList.remove('modal--visible')
     }
   });
 
