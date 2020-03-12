@@ -1,3 +1,49 @@
+$(document).ready(function () {
+
+  var modal = $('.modal'),
+    modalBtn = $('[data-toggle=modal]'),
+    closeBtn = $('.modal__close'),
+    scrollBtn = $('.scroll-top'),
+    modalDialog = $('.modal__dialog');
+
+  modalBtn.on('click', function () {
+    modal.toggleClass('modal--visible');
+  });
+
+  closeBtn.on('click', function () {
+    modal.toggleClass('modal--visible');
+  });
+
+  // close esc
+  $(this).keydown(function (event) {
+    if (event.which == 27) {
+      modal.removeClass('modal--visible');
+    }
+  });
+
+  //---close click
+  $(this).mouseup(function (event) {
+    if (event.target != modalDialog[0] && modalDialog.has(event.target).length === 0) {
+      modal.removeClass('modal--visible');
+    }
+  })
+
+  //scroll ------
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 500) {
+      scrollBtn.removeClass('scroll-top__button--hidden')
+    } else {
+      scrollBtn.addClass('scroll-top__button--hidden')
+    }
+  });
+
+  scrollBtn.on('click', function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    $('html, body').animate({ scrollTop: 0 }, 1000, "swing");
+  });
+
+});
 /*
 document.addEventListener('DOMContentLoaded', function (event) {
 
@@ -27,52 +73,3 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 });
 */
-document.addEventListener('DOMContentLoaded', function (event) {
-  document.addEventListener('click', event => {
-    if (event.target.matches('.button')) {
-      event.target.focus();
-    }
-  });
-});
-
-$(document).ready(function () {
-
-
-  var modal = $('.modal'),
-    modalBtn = $('[data-toggle=modal]'),
-    closeBtn = $('.modal__close'),
-    scrollBtn = $('.scroll-top');
-
-
-
-  modalBtn.on('click', function () {
-    modal.toggleClass('modal--visible');
-  });
-  closeBtn.on('click', function () {
-    modal.toggleClass('modal--visible');
-  });
-
-  $(this).keydown(function (event) {
-    if (event.which == 27) {
-      modal.removeClass('modal--visible');
-    }
-  });
-
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > 500) {
-      scrollBtn.removeClass('scroll-top__button--hidden')
-    } else {
-      scrollBtn.addClass('scroll-top__button--hidden')
-    }
-  });
-
-  // var nt = $(document.body).scrollTop() - (e.deltaY * e.deltaFactor * 100);
-
-  scrollBtn.on('click', function (event) {
-    event.preventDefault();
-    event.stopPropagation();
-    $('html, body').animate({ scrollTop: 0 }, 1000, "swing");
-  });
-
-  console.log(scrollBtn);
-});
