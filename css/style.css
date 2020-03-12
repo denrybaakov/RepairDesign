@@ -414,7 +414,7 @@ a:focus {
 .scroll-top {
   position: fixed;
   bottom: 2rem;
-  right: 0.3rem;
+  right: 1.5rem;
   width: 39px;
   height: 39px;
   cursor: pointer; }
