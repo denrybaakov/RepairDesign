@@ -563,9 +563,10 @@ img {
   .hero__button {
     margin-right: 16px;
     padding: 19px 28px; }
-  .hero .button--outline {
-    padding: 17px 46px; }
-  .hero__scroll-down {
+
+.button--outline {
+  padding: 17px 46px; }
+  .button--outline__scroll-down {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -578,7 +579,7 @@ img {
     text-decoration: none;
     color: #fff;
     background-color: #131313; }
-    .hero__scroll-down::after {
+    .button--outline__scroll-down::after {
       content: '';
       margin-left: 12px;
       width: 30px;
@@ -586,14 +587,14 @@ img {
       border: 2px solid #E3B873;
       border-radius: 50%;
       background: url(../img/arrowDown.svg) no-repeat center center; }
-    .hero__scroll-down:hover {
+    .button--outline__scroll-down:hover {
       color: #E3B873; }
-  .hero .scroll-down {
+  .button--outline .scroll-down {
     font-family: 'Yeseva One Regular', serif;
     font-weight: 400;
     font-size: 0.85rem;
     line-height: 2px; }
-    .hero .scroll-down:focus {
+    .button--outline .scroll-down:focus {
       outline: none;
       box-shadow: none; }
 
@@ -872,16 +873,17 @@ img {
     text-decoration: none; }
   .title {
     margin-bottom: 1.14rem;
-    font-size: 1.64rem; }
+    font-size: 2rem; }
   .hero__content {
     max-width: 22.86rem;
     margin: 0 auto; }
   .hero__text {
     font-size: 1.29rem;
-    margin-bottom: 2.28rem; }
+    margin-bottom: 3.8rem; }
   .hero__button {
     display: block;
-    min-width: 22.86rem;
+    max-width: 22.86rem;
+    width: 100%;
     margin-bottom: 1.85rem; }
   .hero__scroll-down {
     display: none; }
