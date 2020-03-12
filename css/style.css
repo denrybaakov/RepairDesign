@@ -411,6 +411,8 @@ template {
     .scroll-top__button--hidden {
       opacity: 1;
       visibility: hidden; }
+    .scroll-top__button:hover {
+      background: #131313 url(../img/scrollTop2.svg) no-repeat center center; }
 
 .container {
   max-width: 1256px;
