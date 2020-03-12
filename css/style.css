@@ -398,6 +398,20 @@ template {
     border-radius: 2px;
     cursor: pointer; }
 
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  left: 0.3rem;
+  width: 39px;
+  height: 39px;
+  cursor: pointer; }
+  .scroll-top__button {
+    background: #131313 url(../img/scrollTop.svg) no-repeat center center;
+    border-radius: 50%; }
+    .scroll-top__button--hidden {
+      opacity: 1;
+      visibility: hidden; }
+
 .container {
   max-width: 1256px;
   width: 85%;
@@ -764,6 +778,7 @@ img {
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {
+    padding: 19px 34px;
     align-self: flex-end; }
 
 @media screen and (max-width: 1200px) {
