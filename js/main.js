@@ -27,12 +27,23 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 });
 */
+document.addEventListener('DOMContentLoaded', function (event) {
+  document.addEventListener('click', event => {
+    if (event.target.matches('.button')) {
+      event.target.focus();
+    }
+  });
+});
 
 $(document).ready(function () {
+
+
   var modal = $('.modal'),
     modalBtn = $('[data-toggle=modal]'),
     closeBtn = $('.modal__close'),
     scrollBtn = $('.scroll-top');
+
+
 
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
@@ -55,9 +66,12 @@ $(document).ready(function () {
     }
   });
 
+  // var nt = $(document.body).scrollTop() - (e.deltaY * e.deltaFactor * 100);
+
   scrollBtn.on('click', function (event) {
     event.preventDefault();
-    $('html, body').animate({ scrollTop: 0 }, '300');
+    event.stopPropagation();
+    $('html, body').animate({ scrollTop: 0 }, 1000, "swing");
   });
 
   console.log(scrollBtn);

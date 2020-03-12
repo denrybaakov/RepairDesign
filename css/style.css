@@ -325,6 +325,10 @@ template {
 [hidden] {
   display: none; }
 
+a:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px #fff; }
+
 .button {
   padding: 11px 24px;
   font-size: 0.93rem;
@@ -333,6 +337,9 @@ template {
   border-radius: 2px; }
   .button:hover {
     cursor: pointer; }
+  .button:active {
+    outline: none;
+    box-shadow: none; }
   .button--primary {
     background-color: #E3B873;
     color: #fff;
@@ -344,6 +351,9 @@ template {
       color: #131313;
       background-color: #FFE7C1;
       box-shadow: none; }
+    .button--primary:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px #E3B873; }
   .button--outline {
     border: 1px solid #fff;
     color: #fff;
@@ -352,6 +362,9 @@ template {
     .button--outline:hover {
       color: #131313;
       background-color: #fff; }
+    .button--outline:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px #fff; }
 
 .label {
   font-family: 'Futura Book', sans-serif;
@@ -401,13 +414,14 @@ template {
 .scroll-top {
   position: fixed;
   bottom: 2rem;
-  left: 0.3rem;
+  right: 0.3rem;
   width: 39px;
   height: 39px;
   cursor: pointer; }
   .scroll-top__button {
     background: #131313 url(../img/scrollTop.svg) no-repeat center center;
-    border-radius: 50%; }
+    border-radius: 50%;
+    cursor: pointer; }
     .scroll-top__button--hidden {
       opacity: 1;
       visibility: hidden; }

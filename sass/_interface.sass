@@ -1,3 +1,9 @@
+
+a 
+  &:focus
+      outline: none;
+      box-shadow: 0 0 0 1px $light; 
+
 .button
   padding: 11px 24px
 
@@ -9,6 +15,11 @@
 
   &:hover
     cursor: pointer
+  &:active 
+    outline: none
+    box-shadow: none
+  
+    
   &--primary
     background-color: $primary
     color: $light
@@ -20,6 +31,9 @@
       color: $dark
       background-color: $hoverColor
       box-shadow: none
+    &:focus
+      outline: none;
+      box-shadow: 0 0 0 3px $primary; 
 
   &--outline
     border: 1px solid $light
@@ -29,6 +43,9 @@
     &:hover
       color: $dark
       background-color: $light
+    &:focus
+      outline: none;
+      box-shadow: 0 0 0 3px $light 
 
 .label
   +font-FuturaBook
@@ -72,7 +89,7 @@
 .scroll-top
   position: fixed
   bottom: 2rem
-  left: 0.3rem
+  right: 0.3rem
   width: 39px
   height: 39px
   cursor: pointer
@@ -80,6 +97,7 @@
     // padding: 1.5rem
     background: $dark url(../img/scrollTop.svg) no-repeat center center
     border-radius: 50%
+    cursor: pointer
     &--hidden
       opacity: 1
       visibility: hidden
