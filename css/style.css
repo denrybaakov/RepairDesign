@@ -437,6 +437,24 @@ a:focus {
   -webkit-animation: show 2s easy 2s infinite;
   animation: show 2s easy 2s infinite; }
 
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col-30 {
+  flex-basis: 32%; }
+
+.col-50 {
+  max-width: 50%; }
+
+.col-40 {
+  min-width: 32.14rem;
+  max-width: 40%; }
+
+.col-60 {
+  max-width: 60%; }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -453,14 +471,33 @@ img {
 
 .section {
   padding: 70px 0; }
+  .section--dark {
+    color: #fff;
+    background-color: #131313; }
   .section-title {
+    font-family: 'Yeseva One Regular', serif;
+    font-weight: 400;
     text-align: center;
     text-transform: uppercase; }
+    .section-title--left {
+      text-align: left; }
     .section-title__heading {
       font-family: 'Yeseva One Regular', serif;
       font-weight: 400;
       font-size: 1.42rem;
-      letter-spacing: 0; }
+      letter-spacing: 0;
+      line-height: 138.6%; }
+      .section-title__heading--primary {
+        color: #E3B873; }
+    .section-title__word {
+      display: flex;
+      align-items: center; }
+      .section-title__word::after {
+        content: '';
+        width: 90px;
+        height: 1px;
+        margin-left: 2.5rem;
+        background-color: #E3B873; }
     .section-title__image {
       display: flex;
       align-items: center;
@@ -473,9 +510,11 @@ img {
         border-radius: 2px;
         background-color: #E3B873; }
   .section-description {
+    max-width: 31.5rem;
     font-family: 'Futura Book', sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.28rem;
+    text-transform: none;
     line-height: 27px;
     color: #131313; }
 
@@ -541,6 +580,15 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(19, 19, 19, 0.7); }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 3.46rem;
+    background-color: #131313; }
   .hero__instagram {
     position: absolute;
     left: 0;
@@ -563,10 +611,7 @@ img {
   .hero__button {
     margin-right: 16px;
     padding: 19px 28px; }
-
-.button--outline {
-  padding: 17px 46px; }
-  .button--outline__scroll-down {
+  .hero__scroll-down {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -578,8 +623,9 @@ img {
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
-    background-color: #131313; }
-    .button--outline__scroll-down::after {
+    background-color: #131313;
+    z-index: 3; }
+    .hero__scroll-down::after {
       content: '';
       margin-left: 12px;
       width: 30px;
@@ -587,16 +633,17 @@ img {
       border: 2px solid #E3B873;
       border-radius: 50%;
       background: url(../img/arrowDown.svg) no-repeat center center; }
-    .button--outline__scroll-down:hover {
+    .hero__scroll-down:hover {
       color: #E3B873; }
-  .button--outline .scroll-down {
-    font-family: 'Yeseva One Regular', serif;
-    font-weight: 400;
-    font-size: 0.85rem;
-    line-height: 2px; }
-    .button--outline .scroll-down:focus {
-      outline: none;
-      box-shadow: none; }
+
+.scroll-down {
+  font-family: 'Yeseva One Regular', serif;
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 2px; }
+  .scroll-down:focus {
+    outline: none;
+    box-shadow: none; }
 
 .instagram {
   display: flex;
@@ -632,16 +679,113 @@ img {
   .title--primary {
     color: #E3B873; }
 
+.button--outline {
+  padding: 17px 46px; }
+
+.projects {
+  padding-top: 9rem;
+  padding-bottom: 0; }
+  .projects__section-title {
+    margin-top: 0;
+    font-family: 'Yeseva One Regular', serif;
+    font-weight: 400;
+    font-size: 1.92rem;
+    letter-spacing: -2px;
+    line-height: 138.6%;
+    text-align: left;
+    color: #E3B873; }
+  .projects__section-description {
+    margin-bottom: 2.29rem;
+    color: #fff; }
+
+.swiper-slide {
+  display: flex;
+  flex-wrap: wrap; }
+  .swiper-slide__content {
+    margin-bottom: 5.8rem;
+    padding-right: 9rem; }
+  .swiper-slide__text {
+    flex-basis: 50%;
+    min-width: 40%;
+    padding-bottom: 1.35rem; }
+  .swiper-slide__value {
+    letter-spacing: 1px;
+    line-height: 1.3rem; }
+  .swiper-slide__heading {
+    margin-bottom: 0.64rem;
+    font-family: 'Yeseva One Regular', serif;
+    font-weight: 400;
+    font-size: 1.285rem;
+    line-height: 1.78rem;
+    text-transform: uppercase;
+    color: #E3B873; }
+  .swiper-slide__image {
+    justify-content: space-around;
+    padding-left: 2rem; }
+
+.swiper-pagination-bullets {
+  width: auto; }
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.3); }
+  .swiper-pagination-bullet-active {
+    background-color: #fff; }
+
+.swiper-button-prev, .swiper-button-next {
+  bottom: 0;
+  top: auto;
+  background-size: 42px;
+  width: 42px;
+  height: 14px;
+  cursor: pointer; }
+  .swiper-button-prev::after, .swiper-button-next::after {
+    display: none; }
+
+.swiper-button-prev {
+  left: 0;
+  background: url(../img/arrov-prev.svg) no-repeat center; }
+
+.swiper-button-next {
+  background: url(../img/arrov-next.svg) no-repeat center; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  width: auto;
+  bottom: -2px; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0px 10px; }
+
+@media screen and (max-width: 1200px) {
+  .projects__row {
+    align-items: center; }
+  .projects__navigation {
+    display: flex; }
+  .col-60 {
+    min-width: 40%; }
+  .swiper-slide__content {
+    padding-right: 0; } }
+
+@media screen and (max-width: 767px) {
+  .projects__row {
+    align-items: center;
+    flex-direction: column; }
+  .projects__col-40 {
+    order: 2; }
+  .projects__col-60 {
+    order: 1; }
+  .swiper-slide__image {
+    margin-bottom: 3rem;
+    padding: 0; } }
+
+.control {
+  padding-top: 6.5rem; }
+  .control-title {
+    margin-top: 0;
+    font-family: 'Yeseva One Regular', serif;
+    font-weight: 400; }
+
 .types__section-title {
   margin-bottom: 2.1rem; }
-
-.row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between; }
-
-.col {
-  flex-basis: 32%; }
 
 .card {
   text-align: center; }
@@ -821,7 +965,9 @@ img {
   .card__text {
     max-width: 18.87rem; }
   .design-card__text {
-    max-width: 18.87rem; } }
+    max-width: 18.87rem; }
+  .swiper-slide__content {
+    padding-right: 0rem; } }
 
 @media screen and (max-width: 767px) {
   .row {
@@ -831,7 +977,7 @@ img {
     justify-content: space-evenly; }
     .row__design {
       align-items: flex-start; }
-  .col {
+  .col-30 {
     flex-basis: 40%; }
   .card__text {
     margin: -4.45rem auto 0 auto;

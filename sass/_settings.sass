@@ -11,15 +11,32 @@ img
 
 .section
   padding: 70px 0
+  &--dark
+    color: $light
+    background-color: $dark
   &-title
-    // font-family: 'Yeseva One Regular', cursive, serif
-
+    +font-YesevaOne
     text-align: center
     text-transform: uppercase
+    &--left
+      text-align: left
     &__heading
       +font-YesevaOne
       font-size: 1.42rem
       letter-spacing: 0
+      line-height: 138.6%
+      &--primary
+        color: $primary
+    &__word
+      display: flex
+      align-items: center
+      &::after
+        content: ''
+        width: 90px
+        height: 1px
+        margin-left: 2.5rem
+        background-color: $primary
+
     &__image
       display: flex
       align-items: center
@@ -32,7 +49,9 @@ img
         border-radius: 2px
         background-color: $primary
   &-description
+    max-width: 31.5rem
     +font-FuturaBook
-    font-size: 20px
+    font-size: 1.28rem
+    text-transform: none
     line-height: 27px
     color: $dark

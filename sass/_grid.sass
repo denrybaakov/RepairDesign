@@ -5,3 +5,20 @@
 
 .block
   animation: show 2s easy 2s infinite
+
+.row
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+
+.col
+  &-30
+    flex-basis: 32% //30%??
+  &-50
+    max-width: 50% // flex-basis is not swiperjs
+  &-40
+    min-width: 32.14rem
+    max-width: 40%
+  &-60
+    max-width: 60%
+  
