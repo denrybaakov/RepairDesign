@@ -12,11 +12,27 @@
   &__section-description
     margin-bottom: 2.29rem;
     color: $light
+  &__navigation
+    position: absolute
+    top: 230px
+    left: 0
+    // height: 10px
+    // top: -10px
+    // left: 0
+    // display: flex
+    // flex-direction: column
+
 
 
 
 
 .swiper
+  &__navigation 
+    left: 42px;
+    top: -11px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
   
   &-slide
     display: flex
@@ -39,14 +55,16 @@
       line-height: 1.78rem
       text-transform: uppercase
       color: $primary
-
     &__image
       justify-content: space-around;
       padding-left: 2rem;
+
   &-pagination
     &-bullets
       width: auto 
+      
     &-bullet
+      margin-left: 20px
       background-color: rgba($light, 0.3)
       &-active 
         background-color: $light
@@ -102,17 +120,22 @@
     &__row
       align-items: center
       flex-direction: column
-  .projects
     &__col-40
       order: 2
     &__col-60
       order: 1
+    &__navigation 
+      top: 230px
+      left: 70px
 
   .swiper
     &-slide
       &__image
         margin-bottom: 3rem
         padding: 0
+
+      &__pagination
+
 
   
 

@@ -62,8 +62,8 @@ $(document).ready(function () {
   var prev = $('.swiper-button-prev');
   var bullets = $('.swiper-pagination');
 
-  next.css('left', prev.width() + 30 + bullets.width() + 15);
-  bullets.css('left', prev.width() + 22);
+  next.css('left', prev.width() + 30 + bullets.width() + 8);
+  bullets.css('left', prev.width() + 8);
 
 });
 /*
