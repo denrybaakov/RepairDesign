@@ -107,7 +107,7 @@ $(document).ready(function () {
   // var mySwiperTarget = $('.target__swiper-container').swiper;
   // mySwiperTarget.slideNext();
 
-  console.log(mySwiperTarget.pagination)
+  // console.log(mySwiperTarget.pagination)
 
 });
 /*

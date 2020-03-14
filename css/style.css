@@ -782,6 +782,7 @@ img {
 
 @media screen and (max-width: 992px) {
   .projects__image {
+    width: auto;
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover; } }
@@ -797,6 +798,11 @@ img {
   .projects__navigation {
     top: 230px;
     left: 70px; }
+  .projects__image {
+    width: 100%;
+    height: auto;
+    -o-object-fit: auto;
+    object-fit: auto; }
   .swiper-slide__image {
     margin-bottom: 3rem;
     padding: 0; } }
@@ -1169,6 +1175,7 @@ img {
     min-width: auto;
     max-width: 100%; }
   .projects__col-60 {
+    left: 52%;
     top: 26.5rem;
     max-width: 100%; }
   .projects__navigation {
