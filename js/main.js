@@ -45,16 +45,20 @@ $(document).ready(function () {
 
 
 
+
+
   //swiper-slider------projects
-  var mySwiper = new Swiper('.swiper-container', {
+
+  //swiper-projects
+  var mySwiper = new Swiper('.swiper-container__content', {
     loop: true,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper__navigation',
       type: 'bullets',
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper__button-next',
+      prevEl: '.swiper__button-prev',
     },
   });
 
@@ -64,6 +68,46 @@ $(document).ready(function () {
 
   next.css('left', prev.width() + 30 + bullets.width() + 8);
   bullets.css('left', prev.width() + 8);
+
+
+
+  //swiper-target
+  var mySwiperTarget = new Swiper('.target__swiper-container', {
+    loop: true,
+    pagination: {
+      el: '.target__pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.target__button-next',
+      prevEl: '.target__button-prev',
+    },
+  });
+  var nextTarget = $('.target__button-next');
+  var prevTarget = $('.target__button-prev');
+  var bulletsTarget = $('.target__pagination');
+
+  nextTarget.css('left', prevTarget.width() + 30 + bulletsTarget.width() + 11);
+  bulletsTarget.css('left', prevTarget.width() + 20);
+
+  //-click block__item in target
+  var block = $('.target-block__item');
+  block.on('click', function (evt) {
+    block.removeClass('target-block__item--active');
+    $(this).toggleClass('target-block__item--active');
+  });
+
+  //-click-to-slide
+  var targetBlock = $('.target-block');
+  $('.swiper-menu').on('click', block, function () {
+    var index = $(this).data('index');
+    mySwiperTarget.slideTo(index);
+  });
+
+  // var mySwiperTarget = $('.target__swiper-container').swiper;
+  // mySwiperTarget.slideNext();
+
+  console.log(mySwiperTarget.pagination)
 
 });
 /*

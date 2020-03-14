@@ -1,0 +1,77 @@
+.target
+  padding-top: 25rem
+  &__section-title 
+    margin-top: 0.357rem
+    margin-bottom: 6.375rem;
+    font-size: 1.928rem
+    line-height: 2.64rem
+    text-align: left
+    color: $primary
+  &__how-work
+    +font-FuturaDemi
+    font-size: 1.07rem
+    color: $light
+  &__number-slide
+    +font-YesevaOne
+    font-size: 1.285rem
+    margin-bottom: 0
+  &-slide__heading
+    margin-top: 1.5rem;
+    font-size: 1.071rem
+    line-height: 1.69rem;
+  &__slide-value 
+    +font-FuturaBook
+    max-width: 88%
+    margin-bottom: 6.7rem
+    line-height: 1.785rem
+    p 
+      margin-top: 0.785rem;
+
+
+
+  &__col-60
+    padding-top: 6rem
+    max-width: 62%;
+
+  &-block 
+    margin-bottom: 2.1rem;
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap 
+    &__item 
+      flex-basis: 24%
+      // max-width: 136px
+      margin-right: 1rem
+      margin-bottom: 1.571rem;
+      opacity: 0.5
+      cursor: pointer
+      &--active
+        opacity: 1
+      &:nth-of-type(3) //-------------------------КРОССБРАУЗЕРНОСТЬ!!!!!!!!!!!!!
+        margin-right: 0
+      &:last-of-type
+        margin-right: 0
+  &__title-block 
+    margin-bottom: 0.8rem;
+    +font-YesevaOne
+    font-size: 1.071rem
+    line-height: 1.5rem
+    &::after
+     content: ''
+     width: 16px
+     height: 1px
+     background-color: $primary
+     display: flex
+     justify-content: felx-start
+    
+      
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet 
+  margin: 0px 9.5px;
+
+
+
+@media screen and ( max-width: 1200px )
+  .target
+    &__slide-value
+      max-width: 95%
