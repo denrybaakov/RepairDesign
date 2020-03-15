@@ -869,6 +869,8 @@ img {
     max-width: 52.92rem;
     margin: 0 auto 3.3rem auto;
     text-align: center; }
+  .design-row {
+    margin-bottom: -30.5rem; }
 
 .design-card {
   text-align: center; }
@@ -913,9 +915,6 @@ img {
     .design-card__pricetag:hover {
       background-color: #FFE7C1;
       color: #131313; }
-
-.row__design {
-  margin-bottom: -30.5rem; }
 
 .target {
   padding-top: 25rem; }
@@ -1089,24 +1088,31 @@ img {
   .card__text {
     max-width: 18.87rem; }
   .design-card__text {
-    max-width: 18.87rem; } }
+    max-width: 18.87rem; }
+  .swiper-slide__content {
+    padding-right: 0rem; } }
 
 @media screen and (max-width: 767px) {
-  .row {
+  .types__row {
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly; }
-    .row__design {
-      align-items: flex-start; }
-  .col-30 {
-    flex-basis: 40%; }
-  .card__text {
+  .types__col-30 {
+    max-width: 42%; }
+  .types__card {
+    margin-bottom: 5rem; }
+  .types__text {
     margin: -4.45rem auto 0 auto;
     max-width: 18rem;
     min-width: 211px; }
-  .types__card {
-    margin-bottom: 5rem; }
+  .design__row {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly; }
+  .design__col {
+    max-width: 42%; }
   .design-card {
     margin-bottom: 5rem; }
   .design-card__text {
@@ -1149,11 +1155,13 @@ img {
     display: none; } }
 
 @media screen and (max-width: 576px) {
-  .row {
+  .types__row {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center; }
-  .card__text {
+  .types__col-30 {
+    max-width: 100%; }
+  .types__text {
     margin: -4.45rem auto 0 0;
     max-width: 23.57rem; }
   .contacts__button {
@@ -1182,6 +1190,15 @@ img {
     padding: 19px 69px; }
   .design {
     background-color: #131313; }
+    .design__row {
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center; }
+    .design__col {
+      max-width: 100%; }
+    .design__text {
+      margin: -4.45rem auto 0 0;
+      max-width: 23.57rem; }
     .design__section-title {
       color: #fff; }
     .design__section-description {
