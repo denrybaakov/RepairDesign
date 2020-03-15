@@ -99,15 +99,39 @@ $(document).ready(function () {
 
   //-click-to-slide
   var targetBlock = $('.target-block');
-  $('.swiper-menu').on('click', block, function () {
+
+
+  $('.target-block__item').on('click', function () {
     var index = $(this).data('index');
-    mySwiperTarget.slideTo(index);
+
+
+
+    // block.on('click', function () {
+    //   block.removeClass('target-block__item--active');
+    //   $(this).toggleClass('target-block__item--active');
+    // });
+    mySwiperTarget[0].slideTo(index);
+    mySwiperTarget[1].slideTo(index);
+
   });
 
-  // var mySwiperTarget = $('.target__swiper-container').swiper;
-  // mySwiperTarget.slideNext();
 
-  // console.log(mySwiperTarget.pagination)
+
+  $('.target__button-next').on('click', function () {
+    block.removeClass('target-block__item--active');
+  });
+  $('.target__button-prev').on('click', function () {
+    block.removeClass('target-block__item--active');
+  });
+
+
+
+
+  // $('.target__slide').on('click', function () {
+  //   var indexText = $(this).data('text');
+  //   console.log(indexText);
+  // })
+
 
 });
 /*

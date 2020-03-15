@@ -987,8 +987,14 @@ img {
   margin: 0px 9.5px; }
 
 @media screen and (max-width: 1200px) {
+  .target__col-30 {
+    max-width: 37%; }
   .target__slide-value {
     max-width: 95%; } }
+
+@media screen and (max-width: 992px) {
+  .target {
+    display: none; } }
 
 .modal {
   opacity: 0;
