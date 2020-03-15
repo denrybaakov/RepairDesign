@@ -52,6 +52,7 @@ $(document).ready(function () {
   //swiper-projects
   var mySwiper = new Swiper('.swiper-container__content', {
     loop: true,
+    effect: 'coverflow',
     pagination: {
       el: '.swiper__navigation',
       type: 'bullets',
@@ -74,6 +75,7 @@ $(document).ready(function () {
   //swiper-target
   var mySwiperTarget = new Swiper('.target__swiper-container', {
     loop: true,
+    effect: 'coverflow',
     pagination: {
       el: '.target__pagination',
       type: 'bullets',
@@ -82,6 +84,7 @@ $(document).ready(function () {
       nextEl: '.target__button-next',
       prevEl: '.target__button-prev',
     },
+
   });
   var nextTarget = $('.target__button-next');
   var prevTarget = $('.target__button-prev');

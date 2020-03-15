@@ -948,6 +948,18 @@ img {
     line-height: 1.785rem; }
     .target__slide-value p {
       margin-top: 0.785rem; }
+    .target__slide-value__button-next:focus {
+      outline: none;
+      box-shadow: none; }
+    .target__slide-value__button-next:active {
+      outline: none;
+      box-shadow: none; }
+    .target__slide-value__button-prev:focus {
+      outline: none;
+      box-shadow: none; }
+    .target__slide-value__button-prev:active {
+      outline: none;
+      box-shadow: none; }
   .target__col-60 {
     padding-top: 6rem;
     max-width: 62%; }
