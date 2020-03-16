@@ -88,6 +88,13 @@
       background: url(../img/arrov-prev.svg) no-repeat center 
     &-next 
       background: url(../img/arrov-next.svg) no-repeat center 
+  &-button
+    &-next:focus
+      outline: none 
+      box-shadow: none
+    &-prev:focus 
+      outline: none
+      box-shadow: none
 
 
 .swiper-container-horizontal>.swiper-pagination-bullets
@@ -140,8 +147,8 @@
       left: 70px
     &__image
       width: 100%
-      height: auto
-      object-fit: auto
+      height: 100%
+      object-fit: none
 
   .swiper
     &-slide

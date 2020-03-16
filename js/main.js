@@ -120,12 +120,23 @@ $(document).ready(function () {
 
 
 
-  $('.target__button-next').on('click', function () {
+  // $('.target__button-next').on('click', function () {
+  // var index = $('.target__slide').initialSlide();
+  // console.log(mySwiperTarget[1].activeIndex);
+  // block.addClass('target-block__item--active').data('index');
+
+  // });
+  // $('.target__button-prev').on('click', function () {
+  //   block.removeClass('target-block__item--active');
+  // });
+
+  mySwiperTarget[0].on('slideChange', function () {
+    var index = mySwiperTarget[0].realIndex;
     block.removeClass('target-block__item--active');
-  });
-  $('.target__button-prev').on('click', function () {
-    block.removeClass('target-block__item--active');
-  });
+    block.eq(index).addClass('target-block__item--active');
+
+  })
+
 
 
 
@@ -139,40 +150,40 @@ $(document).ready(function () {
   //========================================== END swiper-slider   ==========================
 
   //==========================================    wow js   ==========================
-  //new WOW().init();
+  new WOW().init();
 
 
 
 
 
   // ------------------- main animation 
-  var sectionTitle = $('.section-title');
+  // var sectionTitle = $('.section-title');
 
-  var targetPos = sectionTitle.offset().top;
+  // var targetPos = sectionTitle.offset().top;
   var winHeight = $(window).height();
-  var scrollToElem = targetPos - winHeight;
+  // var scrollToElem = targetPos - winHeight;
 
-  $(window).scroll(function () {
-    var winScrollTop = $(this).scrollTop();
-    if (winScrollTop > scrollToElem) {
+  // $(window).scroll(function () {
+  //   var winScrollTop = $(this).scrollTop();
+  //   if (winScrollTop > scrollToElem) {
 
-      // sectionTitle.addClass('animateSectionTitle');
-      sectionTitle.toggleClass('animateSectionTitle');
-    }
-    // console.log(winScrollTop);
-    console.log(scrollToElem);
-  });
+  //     // sectionTitle.addClass('animateSectionTitle');
+  //     sectionTitle.toggleClass('animateSectionTitle');
+  //   }
+  //   // console.log(winScrollTop);
+  //   console.log(scrollToElem);
+  // });
 
-  var designCol = $('.design__col');
-  var targetDesign = designCol.offset().top;
-  var scrollDesign = targetDesign - winHeight;
+  // var designCol = $('.design__col');
+  // var targetDesign = designCol.offset().top;
+  // var scrollDesign = targetDesign - winHeight;
 
-  $(window).scroll(function () {
-    var winScrollTop = $(this).scrollTop();
-    if (winScrollTop > scrollDesign) {
-      designCol.toggleClass('animateCard');
-    }
-  });
+  // $(window).scroll(function () {
+  //   var winScrollTop = $(this).scrollTop();
+  //   if (winScrollTop > scrollDesign) {
+  //     designCol.toggleClass('animateCard');
+  //   }
+  // });
 
   var typesCol = $('.types__col-30');
   var targetTypes = typesCol.offset().top;
@@ -185,16 +196,7 @@ $(document).ready(function () {
     }
   });
 
-  var heroTitle = $('.hero__content');
-  var targetHero = heroTitle.offset().top;
-  var scrollHero = targetHero - winHeight;
 
-  $(window).scroll(function () {
-    var winScrollTop = $(this).scrollTop();
-    if (winScrollTop > scrollHero) {
-      heroTitle.toggleClass('animateTitle');
-    }
-  });
 
 
 
