@@ -1,9 +1,15 @@
 @import '_fonts'
 @import '_normalize'
+
+@import '_animation'
+
 @import '_variables'
 @import '_interface'
 @import '_grid'
 @import '_settings'
+
+
+
 @import 'templates/_header'
 @import 'templates/_hero'
 @import 'templates/_projects'
@@ -13,5 +19,22 @@
 @import 'templates/_targets'
 @import 'templates/_modal'
 
+  
+  
 
 @import '_media'
+
+
+
+.animateSectionTitle
+  animation-name: slideRight 
+  animation-duration: 2000ms
+  animation-delay: 0.5s
+.animateCard
+  animation-name: pulseCard
+  animation-duration: 1000ms
+  animation-delay: 1s
+.animateTitle
+  animation-name: fadeDown 
+  animation-duration: 1500ms
+  animation-delay: 0.1s

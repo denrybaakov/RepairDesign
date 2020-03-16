@@ -47,7 +47,7 @@ $(document).ready(function () {
 
 
 
-  //swiper-slider------projects
+  //==========================================    swiper-slider   ==========================
 
   //swiper-projects
   var mySwiper = new Swiper('.swiper-container__content', {
@@ -134,6 +134,79 @@ $(document).ready(function () {
   //   var indexText = $(this).data('text');
   //   console.log(indexText);
   // })
+
+
+  //========================================== END swiper-slider   ==========================
+
+  //==========================================    wow js   ==========================
+  //new WOW().init();
+
+
+
+
+
+  // ------------------- main animation 
+  var sectionTitle = $('.section-title');
+
+  var targetPos = sectionTitle.offset().top;
+  var winHeight = $(window).height();
+  var scrollToElem = targetPos - winHeight;
+
+  $(window).scroll(function () {
+    var winScrollTop = $(this).scrollTop();
+    if (winScrollTop > scrollToElem) {
+
+      // sectionTitle.addClass('animateSectionTitle');
+      sectionTitle.toggleClass('animateSectionTitle');
+    }
+    // console.log(winScrollTop);
+    console.log(scrollToElem);
+  });
+
+  var designCol = $('.design__col');
+  var targetDesign = designCol.offset().top;
+  var scrollDesign = targetDesign - winHeight;
+
+  $(window).scroll(function () {
+    var winScrollTop = $(this).scrollTop();
+    if (winScrollTop > scrollDesign) {
+      designCol.toggleClass('animateCard');
+    }
+  });
+
+  var typesCol = $('.types__col-30');
+  var targetTypes = typesCol.offset().top;
+  var scrollTypes = targetTypes - winHeight;
+
+  $(window).scroll(function () {
+    var winScrollTop = $(this).scrollTop();
+    if (winScrollTop > scrollTypes) {
+      typesCol.toggleClass('animateCard');
+    }
+  });
+
+  var heroTitle = $('.hero__content');
+  var targetHero = heroTitle.offset().top;
+  var scrollHero = targetHero - winHeight;
+
+  $(window).scroll(function () {
+    var winScrollTop = $(this).scrollTop();
+    if (winScrollTop > scrollHero) {
+      heroTitle.toggleClass('animateTitle');
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 });

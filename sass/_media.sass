@@ -39,6 +39,15 @@
       padding-right: 0rem;
 
 @media screen and (max-width: 767px)
+  //----------------------------control ----------
+  .control
+    &__video 
+      width: 100%
+      min-height: 22rem
+  .video
+    &__play
+      width: 18%
+
   .types //-------------------------------types-------------------------------
     &__row
       flex-wrap: wrap
@@ -125,6 +134,40 @@
       display: none
 
 @media screen and (max-width: 576px)
+  //--------------------control -------------------
+  .control
+    padding-bottom: 0
+    background-color: $dark
+    color: $light
+    &__text 
+      font-size: 1.2rem
+    &__form 
+      flex-direction: column
+    &__input 
+      margin-bottom: 5rem
+      border-bottom: 2px solid rgba($light, 0.5)
+      border-radius: 2px
+      &::placeholder
+        color: $light
+      &--last
+        margin-bottom: 0
+      &:focus 
+        outline: none
+      
+    &__policy 
+      margin-bottom: 4.166rem
+      order: 3
+      &-label 
+        justify-content: flex-start
+    &__label
+      margin: 0
+      color: rgba($light, 0.5)
+    &__button 
+      order: 4
+      margin-bottom: -2.2rem
+
+
+
   .types // ----------------------------types ----------------------------------
     &__row
       flex-wrap: wrap
@@ -183,6 +226,10 @@
 
 
 @media screen and (max-width: 450px)
+  .control
+    &__video 
+      min-height: 14rem
+
   .projects
     &__col-40 
       min-width: auto
