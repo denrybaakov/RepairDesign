@@ -1,0 +1,174 @@
+.team
+  margin-top: -35.8rem
+  &__section-title 
+    margin-top: 1.7rem;
+    color: $light
+  &__heading 
+    margin-bottom: 0.9rem;
+  &__row 
+    justify-content: space-evenly
+    margin-bottom: 3.85rem
+  &__section-description
+    margin: 1.642rem auto 5.65rem auto
+    text-align: center
+    line-height: 1.928rem
+    letter-spacing: 0.07rem;
+    color: $light
+  &-card
+    position: relative
+    &__alex
+      &::after 
+        content: ''
+        position: absolute
+        top: -35px
+        left: -35px
+        display: inline-block
+        width: 70px
+        height: 70px
+        background: $primary url(../img/team/2-2.svg) no-repeat center 40%
+    &__alice
+      &::after 
+        content: ''
+        position: absolute
+        top: -35px
+        left: -35px
+        display: inline-block
+        width: 70px
+        height: 70px
+        background: $primary url(../img/team/1-1.svg) no-repeat center 40%
+    &__david
+      &::after 
+        content: ''
+        position: absolute
+        top: -35px
+        left: -35px
+        display: inline-block
+        width: 70px
+        height: 70px
+        background: $primary url(../img/team/3-3.svg) no-repeat center 40%
+    &__text 
+      position: relative
+      max-width: 16.57rem
+      margin: -6.15rem auto 0 auto
+      padding-top: 1.64rem;
+      text-align: left
+      background-color: hsl(0, 0%, 100%)
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
+    &__title
+      +font-YesevaOne 
+      font-size: 1.28rem;
+      text-align: center
+      margin-top: 0
+      margin-bottom: 0.6rem
+    &__description 
+      margin-top: 0
+      margin-bottom: 1.614rem
+      +font-FuturaBook
+      font-size: 1.285rem
+      text-align: center
+      color: $secondary
+    &__work 
+      display: block
+      padding: 1.04rem 1.642rem
+      max-width: 100%
+      +font-YesevaOne
+      font-size: 0.928rem
+      text-transform: uppercase
+      text-align: center
+      color: $light
+      background-color: $primary
+      transition: color 0.8s
+      &:hover 
+        background-color: $hoverColor
+        color: $dark
+  &__text
+    max-width: 40.581rem
+    margin: auto
+    +font-FuturaBook
+    font-size: 1.428rem
+    line-height: 2.428rem
+    text-align: center
+    &::before 
+      content: ''
+      display: block
+      width: 55px
+      height: 2px
+      margin: 0 auto
+      margin-bottom: 0.8rem
+      background-color: hsl(37, 67%, 67%)
+      border-radius: 30px
+    
+
+
+
+@media screen and ( max-width: 1200px )
+  .team 
+    &__row 
+      justify-content: space-between
+    &__col 
+      max-width: 29%
+
+
+@media screen and (max-width: 992px)
+  .team 
+    background-color: $dark 
+    color: $light
+    margin-top: 0
+    &-card
+      &__alex
+        &::after 
+          content: ''
+          top: -25px
+          left: -25px
+          width: 50px
+          height: 50px
+          background: $primary url(../img/team/2-2.svg) no-repeat center 40% / 150%
+      &__alice
+        &::after 
+          content: ''
+          top: -25px
+          left: -25px
+          width: 50px
+          height: 50px
+          background: $primary url(../img/team/1-1.svg) no-repeat center 40% / 150%
+      &__david
+        &::after 
+          content: ''
+          top: -25px
+          left: -25px
+          width: 50px
+          height: 50px
+          background: $primary url(../img/team/3-3.svg) no-repeat center 40% / 150%
+      &__title 
+        color: $dark
+
+@media screen and (max-width: 767px)
+  .team
+    &__row 
+      flex-wrap: wrap
+      justify-content: space-evenly
+    &__col 
+      max-width: 35%
+      margin-bottom: 6rem
+    
+@media screen and (max-width: 576px)
+  .team 
+    padding-bottom: 0.5rem
+    &__row 
+      flex-direction: column
+      align-items: center
+    &__col 
+      max-width: 100%
+    &-card
+      &__text 
+        max-width: 18.57rem
+      &__work 
+        padding: 1.24rem 1.642rem
+    &__text 
+      display: none
+
+@media screen and (max-width: 450px)
+  .team 
+    &__row 
+      margin-left: 2rem
+    

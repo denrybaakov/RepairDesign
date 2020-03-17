@@ -62,13 +62,14 @@ a
   background: transparent
   border: none 
   border-bottom: 1px solid rgba(54,54,54,0.3)
-  transition: border-bottom 0.5s ease-in-out
+  
   &--light 
     &::placeholder
       color: $light
   &:focus 
     outline: none
     border-bottom: 2px solid $primary
+
 
 .policy
   &__checkbox
@@ -82,6 +83,7 @@ a
   &__label 
     display: flex
     align-items: center
+    font-size: 1.142rem
     +font-FuturaBook
     &::before 
       content: ''
@@ -91,6 +93,8 @@ a
       border: 1px solid $primary
       border-radius: 2px
       cursor: pointer
+    &--center
+      justify-content: center
     
     
 .scroll-top
@@ -110,3 +114,34 @@ a
       visibility: hidden
     &:hover 
       background:  $dark url(../img/scrollTop2.svg) no-repeat center center
+
+
+//---для валидации форм 
+div
+  &.invalid 
+    text-align: center
+    color: tomato
+  &.invalid__control
+    margin-top: 0.5rem
+    text-align: center
+    color: tomato 
+  &.invalid__footer
+    margin-top: 0.5rem
+    text-align: center
+    color: tomato 
+
+input
+  &.invalid
+    border-bottom: 2px solid tomato
+    &:focus 
+      border-bottom: 2px solid tomato
+  &.invalid__control 
+    border-bottom: 2px solid tomato
+    &:focus 
+      border-bottom: 2px solid tomato
+  &.invalid__footer 
+    border-bottom: 2px solid tomato
+    &:focus 
+      border-bottom: 2px solid tomato
+
+

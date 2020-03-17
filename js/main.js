@@ -103,49 +103,17 @@ $(document).ready(function () {
   //-click-to-slide
   var targetBlock = $('.target-block');
 
-
   $('.target-block__item').on('click', function () {
     var index = $(this).data('index');
-
-
-
-    // block.on('click', function () {
-    //   block.removeClass('target-block__item--active');
-    //   $(this).toggleClass('target-block__item--active');
-    // });
     mySwiperTarget[0].slideTo(index);
     mySwiperTarget[1].slideTo(index);
-
   });
-
-
-
-  // $('.target__button-next').on('click', function () {
-  // var index = $('.target__slide').initialSlide();
-  // console.log(mySwiperTarget[1].activeIndex);
-  // block.addClass('target-block__item--active').data('index');
-
-  // });
-  // $('.target__button-prev').on('click', function () {
-  //   block.removeClass('target-block__item--active');
-  // });
 
   mySwiperTarget[0].on('slideChange', function () {
     var index = mySwiperTarget[0].realIndex;
     block.removeClass('target-block__item--active');
     block.eq(index).addClass('target-block__item--active');
-
-  })
-
-
-
-
-
-  // $('.target__slide').on('click', function () {
-  //   var indexText = $(this).data('text');
-  //   console.log(indexText);
-  // })
-
+  });
 
   //========================================== END swiper-slider   ==========================
 
@@ -203,12 +171,107 @@ $(document).ready(function () {
 
 
 
+  //==================== validate ===================
+  // валидация формы 
+  $('.control__form').validate({
+    errorClass: "invalid__control",
+    errorElement: "div",
+    rules: {
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: {
+        required: true,
+        minlength: 19
+      },
+    },
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче 2-х букв"
+      },
+      userPhone: {
+        required: "Телефон обязательно",
+        minlength: "Телефон должен быть полным"
+      }
+    }
+  });
+
+  $('.footer__form').validate({
+    errorClass: "invalid__footer",
+    errorElement: "div",
+    rules: {
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: {
+        required: true,
+        minlength: 19
+      },
+      userQuestion: {
+        required: true,
+        minlength: 8,
+      }
+    },
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче 2-х букв"
+      },
+      userPhone: {
+        required: "Телефон обязательно",
+        minlength: "Телефон должен быть полным"
+      },
+      userQuestion: {
+        required: "Поле должно быть не пустое",
+        minlength: "Вопроc должен состоять минимум из 8 символов"
+      }
+
+    }
+  });
+
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // строчное правило, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: {
+        required: true,
+        minlength: 19
+      },
+      // правило-объект
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, // сообщения
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче 2-х букв"
+      },
+      userPhone: {
+        required: "Телефон обязательно",
+        minlength: "Телефон должен быть полным"
+      },
+      userEmail: {
+        required: "Обязательно укажите корректный Email",
+        email: "Введите в формате example@mail.ru"
+      }
+    }
+  });
 
 
 
 
-
-
+  //=================== Mask Phone =====================
+  $('[type=tel]').mask('+7 (000) 000-00-00 ', { placeholder: "+7 (___) ___-__-__" });
 
 
 });

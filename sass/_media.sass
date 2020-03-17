@@ -11,7 +11,8 @@
   .design-card
     &__text
       margin: -6.45rem auto 0 auto
-// -------------------projects------------------------------------
+// -------------------team------------------------------------
+
 
 
 
@@ -31,8 +32,10 @@
       max-width: 18.87rem
 
   .design-card
+    margin-bottom: 6rem
     &__text
       max-width: 18.87rem
+      
 
   .swiper
     &-slide__content
@@ -144,9 +147,10 @@
     &__form 
       flex-direction: column
     &__input 
-      margin-bottom: 5rem
       border-bottom: 2px solid rgba($light, 0.5)
       border-radius: 2px
+      &-group 
+        margin-bottom: 5rem
       &::placeholder
         color: $light
       &--last
@@ -225,6 +229,10 @@
       font-size: 1.2rem
 
 
+  .scroll-top
+    bottom: 7rem
+
+
 @media screen and (max-width: 450px)
   .control
     &__video 
@@ -257,3 +265,17 @@
   .section
     &-title--left
       margin-bottom: 85% //24rem
+  
+
+  //footer 
+  .footer
+    &__form 
+      flex-direction: column
+    &__input-group
+      &--full-width 
+        margin-bottom: 2rem
+    &__button 
+      width: 100%
+  .policy__label--center
+    justify-content: flex-start
+    font-size: 1rem
