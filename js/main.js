@@ -185,6 +185,9 @@ $(document).ready(function () {
         required: true,
         minlength: 19
       },
+      controlCheckbox: {
+        required: true
+      }
     },
     messages: {
       userName: {
@@ -194,6 +197,9 @@ $(document).ready(function () {
       userPhone: {
         required: "Телефон обязательно",
         minlength: "Телефон должен быть полным"
+      },
+      controlCheckbox: {
+        required: "Нужно заполнить"
       }
     }
   });
@@ -213,6 +219,9 @@ $(document).ready(function () {
       userQuestion: {
         required: true,
         minlength: 8,
+      },
+      footerCheckbox: {
+        required: true
       }
     },
     messages: {
@@ -227,10 +236,13 @@ $(document).ready(function () {
       userQuestion: {
         required: "Поле должно быть не пустое",
         minlength: "Вопроc должен состоять минимум из 8 символов"
+      },
+      footerCheckbox: {
+        required: "Нужно согласиться"
       }
-
     }
   });
+
 
   $('.modal__form').validate({
     errorClass: "invalid",
@@ -249,7 +261,11 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
+      },
+      policyCheckbox: {
+        required: true
       }
+
     }, // сообщения
     messages: {
       userName: {
@@ -263,7 +279,17 @@ $(document).ready(function () {
       userEmail: {
         required: "Обязательно укажите корректный Email",
         email: "Введите в формате example@mail.ru"
+      },
+      policyCheckbox: {
+        required: "Нужно согласиться"
       }
+    }
+  });
+
+  $('.policy__checkbox').validate({
+    onclick: false,
+    messages: {
+      onclick: "sdds"
     }
   });
 

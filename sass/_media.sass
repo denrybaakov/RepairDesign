@@ -131,6 +131,12 @@
       &__content 
         padding-left: 1rem;
 
+
+
+  #footerCheckbox-error
+    top: 35px
+    left: 40%
+
 @media screen and (max-height: 620px)
   .hero
     &__scroll-down
@@ -149,14 +155,16 @@
     &__input 
       border-bottom: 2px solid rgba($light, 0.5)
       border-radius: 2px
-      &-group 
+      color: $light
+    &__input::placeholder
+      color: $light
+    &__input:focus 
+      outline: none
+    &__input-group 
         margin-bottom: 5rem
-      &::placeholder
-        color: $light
-      &--last
-        margin-bottom: 0
-      &:focus 
-        outline: none
+        &--last
+          margin-bottom: 0
+
       
     &__policy 
       margin-bottom: 4.166rem
@@ -228,6 +236,9 @@
       color: $light
       font-size: 1.2rem
 
+  #footerCheckbox-error
+    top: 35px
+    left: 20%
 
   .scroll-top
     bottom: 7rem
