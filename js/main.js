@@ -300,6 +300,45 @@ $(document).ready(function () {
   $('[type=tel]').mask('+7 (000) 000-00-00 ', { placeholder: "+7 (___) ___-__-__" });
 
 
+
+
+
+  //====================== Yandex Map =================
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+      center: [55.783635, 49.112424],
+      zoom: 16
+    }, {
+      searchControlProvider: 'yandex#search'
+    }),
+
+      // Создаём макет содержимого.
+      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      ),
+
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        hintContent: 'Наш офис',
+        balloonContent: 'Вход со двора'
+      }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: 'img/mapMarker.png',
+        // Размеры метки.
+        iconImageSize: [40, 40],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-5, -38]
+      });
+
+
+    myMap.geoObjects
+      .add(myPlacemark);
+  });
+
+
 });
 /*
 document.addEventListener('DOMContentLoaded', function (event) {

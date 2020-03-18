@@ -3,18 +3,18 @@
   background: $black url(../img/footer/footer-bg.jpg) no-repeat center / cover
   &__wrap 
     max-width: 63.07rem 
-    margin: 0 auto
-    margin-bottom: 3.814rem
+    margin: -18.84rem auto 3.814rem auto 
     padding: 2.5rem
     background-color: $black
   &__title 
     margin-top: 0
     margin-bottom: 3.214rem
+    font-size: 1.428rem
     +font-YesevaOne
     font-style: normal
-    font-style: 1.428rem
     text-align: center
     text-transform: uppercase
+    
   &__form
     display: flex
     flex-wrap: wrap
@@ -38,5 +38,83 @@
     padding: 1.285rem 4.785rem
     margin: 0 auto
   &__menu 
+    margin: auto
     padding: 4.285rem 0
     background-color: $black
+  &__map 
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem 
+
+  &__subtitle 
+    max-width: 42.07rem
+    margin: 0 auto 1.557rem auto
+    +font-YesevaOne
+    font-size: 1.428rem
+    line-height: 2rem
+    text-align: center
+    letter-spacing: 0.5px
+    text-transform: uppercase
+    color: $primary 
+  &__icon 
+    display: flex
+    justify-content: center
+    margin-bottom: 3.142rem
+.icon
+  &__mail 
+    display: inline-block
+    margin-right: 1.04rem
+    margin-left: -1.7rem;
+    width: 28px
+    height: 28px
+    background: $primary url(../img/footer/mail.svg) no-repeat center / 100%
+    border-radius: 50%
+    cursor: pointer
+    transition: background 0.3s
+    &:hover 
+      background: $hoverColor url(../img/footer/mail2.svg) no-repeat center / 98%
+  &__insta 
+    display: inline-block
+    width: 28px
+    height: 28px
+    background: $primary url(../img/footer/insta.svg) no-repeat center / 110%
+    border-radius: 50%
+    cursor: pointer
+    transition: background 0.5s
+    &:hover 
+      background: $hoverColor url(../img/footer/insta2.svg) no-repeat center 
+
+.map 
+  height: 33.214rem
+  width: 66.07rem
+
+
+
+
+@media screen and (max-width: 992px)
+  .footer
+    &__wrap 
+      margin: 0 auto 3.814rem auto
+
+
+
+@media screen and (max-width: 576px)
+  .footer
+    &__form 
+      flex-direction: column
+    &__input-group
+      &--full-width 
+        margin-bottom: 2rem
+    &__button 
+      width: 100%
+  .policy__label--center
+    justify-content: flex-start
+    font-size: 1rem
+  .map 
+    height: 23.214rem
+    width: 66.07rem
+
+@media screen and (max-width: 450px)
+  .map 
+    height: 18.214rem
+    width: 66.07rem
