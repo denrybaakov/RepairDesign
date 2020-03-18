@@ -461,7 +461,7 @@ a:focus {
   color: #fff;
   background: transparent;
   border: none;
-  border-bottom: 1px solid rgba(54, 54, 54, 0.3); }
+  border-bottom: 2px solid rgba(54, 54, 54, 0.3); }
   .input--light::-webkit-input-placeholder {
     color: #fff; }
   .input--light::-moz-placeholder {
@@ -473,6 +473,9 @@ a:focus {
   .input--light::placeholder {
     color: #fff; }
   .input:focus {
+    outline: none;
+    border-bottom: 2px solid #E3B873; }
+  .input:active {
     outline: none;
     border-bottom: 2px solid #E3B873; }
 
@@ -516,34 +519,34 @@ a:focus {
     .scroll-top__button:hover {
       background: #131313 url(../img/scrollTop2.svg) no-repeat center center; }
 
-div.invalid {
-  text-align: center;
-  color: tomato; }
+div {
+  transition: 0.5s ease-in-out; }
+  div.invalid {
+    text-align: center;
+    color: tomato; }
+  div.invalid__control {
+    margin-top: 0.5rem;
+    text-align: center;
+    color: tomato; }
+  div.invalid__footer {
+    margin-top: 0.5rem;
+    text-align: center;
+    color: tomato; }
 
-div.invalid__control {
-  margin-top: 0.5rem;
-  text-align: center;
-  color: tomato; }
-
-div.invalid__footer {
-  margin-top: 0.5rem;
-  text-align: center;
-  color: tomato; }
-
-input.invalid {
-  border-bottom: 2px solid tomato; }
-  input.invalid:focus {
+input {
+  transition: 0.5s ease-in-out; }
+  input.invalid {
     border-bottom: 2px solid tomato; }
-
-input.invalid__control {
-  border-bottom: 2px solid tomato; }
-  input.invalid__control:focus {
+    input.invalid:focus {
+      border-bottom: 2px solid tomato; }
+  input.invalid__control {
     border-bottom: 2px solid tomato; }
-
-input.invalid__footer {
-  border-bottom: 2px solid tomato; }
-  input.invalid__footer:focus {
+    input.invalid__control:focus {
+      border-bottom: 2px solid tomato; }
+  input.invalid__footer {
     border-bottom: 2px solid tomato; }
+    input.invalid__footer:focus {
+      border-bottom: 2px solid tomato; }
 
 .control__policy {
   position: relative; }
@@ -1481,7 +1484,8 @@ img {
     padding-bottom: 0.5rem; }
     .team__row {
       flex-direction: column;
-      align-items: center; }
+      align-items: center;
+      margin-bottom: 0; }
     .team__col {
       max-width: 100%; }
     .team-card__text {
@@ -1664,13 +1668,13 @@ img {
   cursor: pointer;
   transition: background 0.3s; }
   .icon__mail:hover {
-    background: #FFE7C1 url(../img/footer/mail2.svg) no-repeat center/98%; }
+    background: #FFE7C1 url(../img/footer/mail2.svg) no-repeat center/100%; }
 
 .icon__insta {
   display: inline-block;
   width: 28px;
   height: 28px;
-  background: #E3B873 url(../img/footer/insta.svg) no-repeat center/110%;
+  background: #E3B873 url(../img/footer/insta.svg) no-repeat center/100%;
   border-radius: 50%;
   cursor: pointer;
   transition: background 0.5s; }
@@ -1700,6 +1704,33 @@ img {
     width: 66.07rem; } }
 
 @media screen and (max-width: 450px) {
+  .footer {
+    padding-bottom: 2rem;
+    background: none;
+    background-color: #131313; }
+    .footer__wrap {
+      padding: 0; }
+    .footer__button {
+      font-size: 1.13rem; }
+    .footer__subtitle {
+      font-size: 1.288rem;
+      letter-spacing: 0; }
+    .footer__menu {
+      display: none;
+      visibility: hidden; }
+    .footer__mobile-position {
+      display: flex;
+      flex-direction: column; }
+    .footer__map {
+      order: 1; }
+    .footer__subtitle {
+      order: 2; }
+    .footer__icon {
+      order: 3; }
+  .policy__label {
+    font-size: 1.142rem; }
+  .icon__mail {
+    margin-left: 0; }
   .map {
     height: 18.214rem;
     width: 66.07rem; } }
@@ -1956,11 +1987,17 @@ img {
     top: 35px;
     left: 20%; }
   .scroll-top {
-    bottom: 7rem; } }
+    bottom: 5rem; } }
 
 @media screen and (max-width: 450px) {
+  .hero__button {
+    font-size: 0.928rem; }
   .control__video {
     min-height: 14rem; }
+  .control__button {
+    font-size: 1.13rem; }
+  .policy__label {
+    font-size: 1.142rem; }
   .projects__col-40 {
     min-width: auto;
     max-width: 100%; }
@@ -1973,8 +2010,10 @@ img {
     right: 50%;
     margin-left: -76px;
     transform: translate(-50%, -50%); }
+  .section-title__heading {
+    font-size: 1.57rem; }
   .section-description {
-    font-size: 12px; }
+    font-size: 14px; }
   .swiper-slide__heading {
     font-size: 12px; }
   .swiper-slide__text {
