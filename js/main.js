@@ -183,7 +183,7 @@ $(document).ready(function () {
       },
       userPhone: {
         required: true,
-        minlength: 19
+        minlength: 18
       },
       controlCheckbox: {
         required: true
@@ -214,7 +214,7 @@ $(document).ready(function () {
       },
       userPhone: {
         required: true,
-        minlength: 19
+        minlength: 18
       },
       userQuestion: {
         required: true,
@@ -255,7 +255,7 @@ $(document).ready(function () {
       },
       userPhone: {
         required: true,
-        minlength: 19
+        minlength: 18
       },
       // правило-объект
       userEmail: {
@@ -289,15 +289,13 @@ $(document).ready(function () {
   $('.policy__checkbox').validate({
     onclick: false,
     messages: {
-      onclick: "sdds"
+      onclick: "Нужно согласиться"
     }
   });
 
 
 
 
-  //=================== Mask Phone =====================
-  $('[type=tel]').mask('+7 (000) 000-00-00 ', { placeholder: "+7 (___) ___-__-__" });
 
 
 
@@ -337,6 +335,44 @@ $(document).ready(function () {
     myMap.geoObjects.add(myPlacemark);
   });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //=================== Mask Phone =====================
+  $('[type=tel]').mask('+7 (000) 000-00-00', { placeholder: "Ваш номер телефона: " });
+  // $('[type=tel]').mask('+8 (000) 000-00-00 ', { placeholder: "____________" });
 
 });
 /*

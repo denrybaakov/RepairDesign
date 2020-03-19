@@ -1,8 +1,8 @@
 
-a 
+a
   &:focus
-      outline: none
-      box-shadow: none
+    outline: none
+    box-shadow: none
 
 .button
   padding: 11px 24px
@@ -15,12 +15,10 @@ a
 
   &:hover
     cursor: pointer
-  &:active 
+  &:active
     outline: none
     box-shadow: none
 
-  
-    
   &--primary
     background-color: $primary
     color: $light
@@ -33,8 +31,8 @@ a
       background-color: $hoverColor
       box-shadow: none
     &:focus
-      outline: none;
-      box-shadow: 0 0 0 2px $primary; 
+      outline: none
+      box-shadow: 0 0 0 2px $primary
 
   &--outline
     border: 1px solid $light
@@ -45,9 +43,8 @@ a
       color: $dark
       background-color: $light
     &:focus
-      outline: none;
-      box-shadow: 0 0 0 3px $light 
-
+      outline: none
+      box-shadow: 0 0 0 3px $light
 
 .label
   +font-FuturaBook
@@ -55,40 +52,31 @@ a
   &--light
     color: rgba($light, 0.5)
 
-.input 
+.input
   padding: 0.5rem 0
   font-size: 1.285rem
   color: $light
   background: transparent
-  border: none 
+  border: none
   border-bottom: 2px solid rgba(54,54,54,0.3)
-  
-  &--light 
+
+  &--light
     &::placeholder
       color: $light
-  &:focus 
+  &:focus
     outline: none
     border-bottom: 2px solid $primary
-  &:active 
+  &:active
     outline: none
     border-bottom: 2px solid $primary
-
 
 .policy
-  &__checkbox
-    opacity: 0
-    visibility: hidden
-    
-    &:checked + .policy__label::before 
-      background: $primary url(../img/check.svg) no-repeat center / 0.9rem
-
-      
-  &__label 
+  &__label
     display: flex
     align-items: center
     font-size: 1.142rem
     +font-FuturaBook
-    &::before 
+    &::before
       content: ''
       width: 18px
       height: 18px
@@ -98,8 +86,12 @@ a
       cursor: pointer
     &--center
       justify-content: center
-    
-    
+  &__checkbox
+    opacity: 0
+    visibility: hidden
+    &:checked + .policy__label::before
+      background: $primary url(../img/check.svg) no-repeat center / 0.9rem
+
 .scroll-top
   position: fixed
   bottom: 2rem
@@ -115,65 +107,64 @@ a
     &--hidden
       opacity: 1
       visibility: hidden
-    &:hover 
-      background:  $dark url(../img/scrollTop2.svg) no-repeat center center
-
+    &:hover
+      background: $dark url(../img/scrollTop2.svg) no-repeat center center
 
 //---для валидации форм 
 div
   transition: 0.5s ease-in-out
-  &.invalid 
+  &.invalid
     text-align: center
     color: tomato
   &.invalid__control
     margin-top: 0.5rem
     text-align: center
-    color: tomato 
+    color: tomato
   &.invalid__footer
     margin-top: 0.5rem
     text-align: center
-    color: tomato 
+    color: tomato
 
 input
   transition: 0.5s ease-in-out
   &.invalid
     border-bottom: 2px solid tomato
-    &:focus 
+    &:focus
       border-bottom: 2px solid tomato
-  &.invalid__control 
+  &.invalid__control
     border-bottom: 2px solid tomato
-    &:focus 
+    &:focus
       border-bottom: 2px solid tomato
-  &.invalid__footer 
+  &.invalid__footer
     border-bottom: 2px solid tomato
-    &:focus 
+    &:focus
       border-bottom: 2px solid tomato
 
 .control
-  &__policy 
+  &__policy
     position: relative
-  &__input-group 
+  &__input-group
     position: relative
     // display: block
 div.invalid__control
-  position: absolute 
+  position: absolute
   display: block
   top: 48px
   left: 0
 
-#controlCheckbox-error 
+#controlCheckbox-error
   top: 35px
   left: 40%
 
 .footer
-  &__policy 
+  &__policy
     position: relative
-  &__input-group 
+  &__input-group
     position: relative
 
 div.invalid__footer
   position: absolute
-  display: block 
+  display: block
   top: 48px
   left: 0
 
@@ -181,16 +172,13 @@ div.invalid__footer
   top: 35px
   left: 40%
 
-.modal 
-  &__policy 
+.modal
+  &__policy
     position: relative
-  &__input-group 
-    position: relative 
-div.invalid 
+  &__input-group
+    position: relative
+div.invalid
   position: absolute
-  display: block 
+  display: block
   top: 56px
   left: 0
-
-    
-

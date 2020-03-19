@@ -479,12 +479,6 @@ a:focus {
     outline: none;
     border-bottom: 2px solid #E3B873; }
 
-.policy__checkbox {
-  opacity: 0;
-  visibility: hidden; }
-  .policy__checkbox:checked + .policy__label::before {
-    background: #E3B873 url(../img/check.svg) no-repeat center/0.9rem; }
-
 .policy__label {
   display: flex;
   align-items: center;
@@ -501,6 +495,12 @@ a:focus {
     cursor: pointer; }
   .policy__label--center {
     justify-content: center; }
+
+.policy__checkbox {
+  opacity: 0;
+  visibility: hidden; }
+  .policy__checkbox:checked + .policy__label::before {
+    background: #E3B873 url(../img/check.svg) no-repeat center/0.9rem; }
 
 .scroll-top {
   position: fixed;
@@ -1107,7 +1107,19 @@ img {
       background-color: #E3B873;
       border-radius: 30px; }
   .control__input {
-    color: #131313; }
+    color: #181818; }
+    .control__input::-webkit-input-placeholder {
+      color: #131313; }
+    .control__input::-moz-placeholder {
+      color: #131313; }
+    .control__input:-ms-input-placeholder {
+      color: #131313; }
+    .control__input::-ms-input-placeholder {
+      color: #131313; }
+    .control__input::placeholder {
+      color: #131313; }
+  .control__label {
+    color: rgba(54, 54, 54, 0.5); }
   .control__form {
     margin: 0 auto;
     display: flex;
