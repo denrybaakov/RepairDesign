@@ -6,6 +6,9 @@ $(document).ready(function () {
     scrollBtn = $('.scroll-top'),
     modalDialog = $('.modal__dialog');
 
+  var closeReview = $('.review__close');
+  var modalReview = $('.review');
+
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
   });
@@ -14,10 +17,15 @@ $(document).ready(function () {
     modal.toggleClass('modal--visible');
   });
 
+  closeReview.on('click', function () {
+    modalReview.removeClass('review--visible');
+  })
+
   // close esc
   $(this).keydown(function (event) {
     if (event.which == 27) {
       modal.removeClass('modal--visible');
+      modalReview.removeClass('review--visible');
     }
   });
 
@@ -25,6 +33,7 @@ $(document).ready(function () {
   $(this).mouseup(function (event) {
     if (event.target != modalDialog[0] && modalDialog.has(event.target).length === 0) {
       modal.removeClass('modal--visible');
+      modalReview.removeClass('review--visible');
     }
   })
 
@@ -216,6 +225,27 @@ $(document).ready(function () {
         }
       });
     },
+    submitHandler: function (form) {
+      event.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "./send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          // console.log('Ajax сработал. Ответ сервера: ' + response);
+          $(form)[0].reset();
+          // $('.control__form').hide();
+          $('.review').addClass('review--visible');
+          $('.review__modal').html('<button class="modal__close"></button><h3 class="feedback">Ваша заявка на получение ссылки <span class="feedback__primary">успешно отправлена</span></h3><p class="feedback__description">Наш менеджер отправит Вам ссылку ближайшее время. А пока Вы можете посетить нашу <a href="https://vk.com/" class="feedback__link">группу в Вконтакте</a></p>');
+
+          // $('.modal__close').on('click', function () {
+          //   modal.toggleClass('modal--visible');
+          // });
+
+          // modal.removeClass('modal--visible');
+        }
+      });
+    },
     errorPlacement: function (error, element) { // -----ошибка checkbox ))))
       if (element.attr("type") == "checkbox") {
         return element.next('label').append(error);
@@ -275,6 +305,19 @@ $(document).ready(function () {
         }
       });
     },
+    submitHandler: function (form) {
+      event.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "./send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          $('.review').addClass('review--visible');
+          $('.review__modal').html('<button class="modal__close"></button><h3 class="feedback">Ваш вопрос <span class="feedback__primary">успешно отправлен</span></h3><p class="feedback__description">Наш менеджер свяжеться с Вами в ближайшее время. А пока Вы можете посетить нашу <a href="https://vk.com/" class="feedback__link">группу в Вконтакте</a></p>');
+        }
+      });
+    },
     errorPlacement: function (error, element) { // -----ошибка checkbox ))))
       if (element.attr("type") == "checkbox") {
         return element.next('label').append(error);
@@ -305,7 +348,6 @@ $(document).ready(function () {
       policyCheckbox: {
         required: true
       }
-
     }, // сообщения
     messages: {
       userName: {
@@ -331,10 +373,16 @@ $(document).ready(function () {
         url: "./send.php",
         data: $(form).serialize(),
         success: function (response) {
-          console.log('Ajax сработал. Ответ сервера: ' + response);
-          alert("Форма отправлена");
+          // console.log('Ajax сработал. Ответ сервера: ' + response);
           $(form)[0].reset();
-          modal.removeClass('modal--visible');
+          $('.modal__form').hide();
+          $('.modal__dialog').html('<button class="modal__close"></button><h3 class="feedback">Ваша заявка <span class="feedback__primary">успешно отправлена</span></h3><p class="feedback__description">Наш менеджер свяжеться в ближайшее время. А пока Вы можете посетить нашу <a href="https://vk.com/" class="feedback__link">группу в Вконтакте</a></p>');
+
+          $('.modal__close').on('click', function () {
+            modal.toggleClass('modal--visible');
+          });
+
+          // modal.removeClass('modal--visible');
         }
       });
     },
@@ -353,10 +401,9 @@ $(document).ready(function () {
     }
   });
 
-
-
-
-
+  closeBtn.on('click', function () {
+    modal.removeClass('modal--visible');
+  });
 
 
 

@@ -592,6 +592,61 @@ div.invalid {
   top: 56px;
   left: 0; }
 
+.feedback {
+  font-family: 'Yeseva One Regular', serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.5rem; }
+  .feedback__primary {
+    color: #E3B873; }
+  .feedback__description {
+    font-size: 1.1rem;
+    line-height: 1.5rem; }
+  .feedback__link {
+    color: #fff; }
+    .feedback__link:hover {
+      text-decoration: none; }
+
+.review {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(19, 19, 19, 0.6);
+  z-index: 199; }
+  .review--visible {
+    opacity: 1;
+    visibility: visible; }
+  .review__modal {
+    position: relative;
+    max-width: 36.36rem;
+    padding: 2.357rem 3.5rem 1.928rem;
+    color: #fff;
+    background: #131313 url(../img/bg-lines.png) no-repeat center;
+    z-index: 999; }
+  .review__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    margin: 12px;
+    background: transparent url(../img/x-circle.svg) no-repeat center;
+    border: none;
+    cursor: pointer; }
+    .review__close:focus {
+      outline: none; }
+    .review__close:hover {
+      background: transparent url(../img/x-circle2.svg) no-repeat center; }
+
 .container {
   max-width: 1256px;
   width: 85%;
@@ -1708,6 +1763,8 @@ img {
     margin-bottom: 2rem; }
   .footer__button {
     width: 100%; }
+  .footer__input {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5); }
   .policy__label--center {
     justify-content: flex-start;
     font-size: 1rem; }
