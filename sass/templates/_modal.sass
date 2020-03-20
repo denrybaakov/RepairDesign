@@ -1,7 +1,7 @@
-.modal 
+.modal
   opacity: 0
   visibility: hidden
-  position: fixed 
+  position: fixed
   left: 0
   right: 0
   top: 0
@@ -13,7 +13,7 @@
   align-items: center
   background-color: rgba($dark, 0.6)
   z-index: 199
-  &--visible 
+  &--visible
     opacity: 1
     visibility: visible
   &__dialog
@@ -24,7 +24,7 @@
     background: $dark url(../img/bg-lines.png) no-repeat center
     z-index: 999
   &__close
-    position: absolute 
+    position: absolute
     top: 0
     right: 0
     width: 28px
@@ -37,16 +37,16 @@
       outline: none
     &:hover
       background: transparent url(../img/x-circle2.svg) no-repeat center
-  &__title 
+  &__title
     margin: 0 0 2.428rem 0
     +font-YesevaOne
     font-size: 1.356rem
     text-align: center
   &__form
-    display: flex 
+    display: flex
     flex-direction: column
     align-self: flex-start
-  &__input 
+  &__input
     &-group
       display: flex
       flex-direction: column
@@ -58,6 +58,6 @@
   &__policy
     margin-bottom: 2.7rem
 
-  &__button 
-    padding: 19px 34px;
+  &__button
+    padding: 19px 34px
     align-self: flex-end

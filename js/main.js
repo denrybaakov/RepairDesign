@@ -201,6 +201,26 @@ $(document).ready(function () {
       controlCheckbox: {
         required: "Нужно заполнить"
       }
+    },
+    submitHandler: function (form) {
+      event.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "./send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал. Ответ сервера: ' + response);
+          alert("Форма отправлена");
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+        }
+      });
+    },
+    errorPlacement: function (error, element) { // -----ошибка checkbox ))))
+      if (element.attr("type") == "checkbox") {
+        return element.next('label').append(error);
+      }
+      error.insertAfter($(element));
     }
   });
 
@@ -240,6 +260,26 @@ $(document).ready(function () {
       footerCheckbox: {
         required: "Нужно согласиться"
       }
+    },
+    submitHandler: function (form) {
+      event.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "./send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал. Ответ сервера: ' + response);
+          alert("Форма отправлена");
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+        }
+      });
+    },
+    errorPlacement: function (error, element) { // -----ошибка checkbox ))))
+      if (element.attr("type") == "checkbox") {
+        return element.next('label').append(error);
+      }
+      error.insertAfter($(element));
     }
   });
 
@@ -283,6 +323,26 @@ $(document).ready(function () {
       policyCheckbox: {
         required: "Нужно согласиться"
       }
+    },
+    submitHandler: function (form) {
+      event.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "./send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал. Ответ сервера: ' + response);
+          alert("Форма отправлена");
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+        }
+      });
+    },
+    errorPlacement: function (error, element) { // -----ошибка checkbox ))))
+      if (element.attr("type") == "checkbox") {
+        return element.next('label').append(error);
+      }
+      error.insertAfter($(element));
     }
   });
 
