@@ -1,24 +1,24 @@
 .team
   margin-top: -35.8rem
   padding-bottom: 5.714rem
-  &__section-title 
-    margin-top: 1.7rem;
+  &__section-title
+    margin-top: 1.7rem
     color: $light
-  &__heading 
-    margin-bottom: 0.9rem;
-  &__row 
+  &__heading
+    margin-bottom: 0.9rem
+  &__row
     justify-content: space-evenly
     margin-bottom: 3.85rem
   &__section-description
     margin: 1.642rem auto 5.65rem auto
     text-align: center
     line-height: 1.928rem
-    letter-spacing: 0.07rem;
+    letter-spacing: 0.07rem
     color: $light
   &-card
     position: relative
     &__alex
-      &::after 
+      &::after
         content: ''
         position: absolute
         top: -35px
@@ -27,8 +27,9 @@
         width: 70px
         height: 70px
         background: $primary url(../img/team/2-2.svg) no-repeat center 40%
+        box-shadow: 0px 5px 20px rgba($primary, 0.5)
     &__alice
-      &::after 
+      &::after
         content: ''
         position: absolute
         top: -35px
@@ -37,8 +38,9 @@
         width: 70px
         height: 70px
         background: $primary url(../img/team/1-1.svg) no-repeat center 40%
+        box-shadow: 0px 5px 20px rgba($primary, 0.5)
     &__david
-      &::after 
+      &::after
         content: ''
         position: absolute
         top: -35px
@@ -47,28 +49,29 @@
         width: 70px
         height: 70px
         background: $primary url(../img/team/3-3.svg) no-repeat center 40%
-    &__text 
+        box-shadow: 0px 5px 20px rgba($primary, 0.5)
+    &__text
       position: relative
       max-width: 16.57rem
       margin: -6.15rem auto 0 auto
-      padding-top: 1.64rem;
+      padding-top: 1.64rem
       text-align: left
       background-color: hsl(0, 0%, 100%)
       box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
     &__title
-      +font-YesevaOne 
-      font-size: 1.28rem;
+      +font-YesevaOne
+      font-size: 1.28rem
       text-align: center
       margin-top: 0
       margin-bottom: 0.6rem
-    &__description 
+    &__description
       margin-top: 0
       margin-bottom: 1.614rem
       +font-FuturaBook
       font-size: 1.285rem
       text-align: center
       color: $secondary
-    &__work 
+    &__work
       display: block
       padding: 1.04rem 1.642rem
       max-width: 100%
@@ -79,7 +82,7 @@
       color: $light
       background-color: $primary
       transition: color 0.8s
-      &:hover 
+      &:hover
         background-color: $hoverColor
         color: $dark
   &__text
@@ -89,7 +92,7 @@
     font-size: 1.428rem
     line-height: 2.428rem
     text-align: center
-    &::before 
+    &::before
       content: ''
       display: block
       width: 55px
@@ -98,26 +101,22 @@
       margin-bottom: 0.8rem
       background-color: hsl(37, 67%, 67%)
       border-radius: 30px
-    
-
-
 
 @media screen and ( max-width: 1200px )
-  .team 
-    &__row 
+  .team
+    &__row
       justify-content: space-between
-    &__col 
+    &__col
       max-width: 29%
 
-
 @media screen and (max-width: 992px)
-  .team 
-    background-color: $dark 
+  .team
+    background-color: $dark
     color: $light
     margin-top: 0
     &-card
       &__alex
-        &::after 
+        &::after
           content: ''
           top: -25px
           left: -25px
@@ -125,7 +124,7 @@
           height: 50px
           background: $primary url(../img/team/2-2.svg) no-repeat center 40% / 150%
       &__alice
-        &::after 
+        &::after
           content: ''
           top: -25px
           left: -25px
@@ -133,45 +132,43 @@
           height: 50px
           background: $primary url(../img/team/1-1.svg) no-repeat center 40% / 150%
       &__david
-        &::after 
+        &::after
           content: ''
           top: -25px
           left: -25px
           width: 50px
           height: 50px
           background: $primary url(../img/team/3-3.svg) no-repeat center 40% / 150%
-      &__title 
+      &__title
         color: $dark
 
 @media screen and (max-width: 767px)
   .team
-    &__row 
+    &__row
       flex-wrap: wrap
       justify-content: space-evenly
-    &__col 
+    &__col
       max-width: 35%
       margin-bottom: 6rem
-    
+
 @media screen and (max-width: 576px)
-  .team 
+  .team
     padding-bottom: 0.5rem
-    &__row 
+    &__row
       flex-direction: column
       align-items: center
       margin-bottom: 0
-    &__col 
+    &__col
       max-width: 100%
     &-card
-      &__text 
+      &__text
         max-width: 18.57rem
-      &__work 
+      &__work
         padding: 1.24rem 1.642rem
-    &__text 
+    &__text
       display: none
 
 @media screen and (max-width: 450px)
-  .team 
-    &__row 
+  .team
+    &__row
       margin-left: 2rem
-    
-    

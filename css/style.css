@@ -528,6 +528,10 @@ div {
     margin-top: 0.5rem;
     text-align: center;
     color: tomato; }
+  div.invalid__info {
+    argin-top: 0.5rem;
+    text-align: center;
+    color: tomato; }
   div.invalid__footer {
     margin-top: 0.5rem;
     text-align: center;
@@ -542,6 +546,10 @@ input {
   input.invalid__control {
     border-bottom: 2px solid tomato; }
     input.invalid__control:focus {
+      border-bottom: 2px solid tomato; }
+  input.invalid__info {
+    border-bottom: 2px solid tomato; }
+    input.invalid__info:focus {
       border-bottom: 2px solid tomato; }
   input.invalid__footer {
     border-bottom: 2px solid tomato; }
@@ -561,8 +569,26 @@ div.invalid__control {
   left: 0; }
 
 #controlCheckbox-error {
+  font-size: 1rem;
   top: 35px;
-  left: 40%; }
+  left: 37%; }
+
+#policyCheckbox-error {
+  top: 43px;
+  left: 0;
+  font-size: 1rem; }
+
+.info-modal__policy {
+  position: relative; }
+
+.info-modal__input-group {
+  position: relative; }
+
+div.invalid__info {
+  position: absolute;
+  display: block;
+  top: 58px;
+  left: 0; }
 
 .footer__policy {
   position: relative; }
@@ -577,8 +603,9 @@ div.invalid__footer {
   left: 0; }
 
 #footerCheckbox-error {
+  font-size: 1rem;
   top: 35px;
-  left: 40%; }
+  left: 35%; }
 
 .modal__policy {
   position: relative; }
@@ -1252,6 +1279,106 @@ img {
       background-color: #FFE7C1;
       color: #131313; }
 
+.info {
+  padding-top: 9.7rem;
+  position: relative;
+  background: url(../img/info/bg.png) no-repeat left; }
+  .info-col__img {
+    position: relative;
+    width: 45.428rem;
+    height: 45.428rem;
+    left: -200px;
+    top: 99px; }
+  .info__circle {
+    margin-top: -100px; }
+  .info-prov {
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .info__col-60 {
+    max-width: 77.357rem;
+    display: flex;
+    flex-direction: column; }
+  .info__text {
+    display: flex;
+    flex-direction: column;
+    max-width: 26rem;
+    font-size: 1.285rem; }
+    .info__text--01 {
+      position: absolute;
+      top: -38px;
+      right: -144px; }
+    .info__text--02 {
+      position: absolute;
+      top: 83px;
+      right: 10px; }
+    .info__text--03 {
+      position: absolute;
+      top: 247px;
+      right: -62px; }
+    .info__text--04 {
+      position: absolute;
+      top: 396px;
+      right: -175px; }
+  .info__col-30 {
+    padding-top: 3.5rem;
+    max-width: 39%; }
+  .info-modal {
+    max-width: 36.36rem;
+    padding: 2rem 3.5rem 1.928rem;
+    color: #fff;
+    background: #131313 url(../img/bg-lines.png) no-repeat center;
+    z-index: 999; }
+    .info-modal__title {
+      margin: 0 0 2.828rem 0;
+      font-family: 'Futura Demi', sans-serif;
+      font-weight: 400;
+      font-size: 1.398rem;
+      text-align: center; }
+    .info-modal__form {
+      display: flex;
+      flex-direction: column;
+      align-self: flex-start; }
+    .info-modal__input-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 3.3rem; }
+      .info-modal__input-group--last {
+        margin-bottom: 1rem; }
+    .info-modal__policy {
+      margin-bottom: 2.5rem; }
+    .info-modal__button {
+      font-size: 0.928rem;
+      font-weight: 500;
+      padding: 1.31rem 3rem;
+      align-self: flex-end; }
+
+@media screen and (max-width: 1200px) {
+  .info {
+    background-size: 48%; }
+    .info-col__img {
+      left: -175px;
+      width: 42.428rem; }
+    .info__circle {
+      width: 35.142rem;
+      margin-top: -87px; }
+    .info__text--01 {
+      top: -34px;
+      right: -135px; }
+    .info__text--02 {
+      top: 65px;
+      right: 0px; }
+    .info__text--03 {
+      top: 198px;
+      right: -64px; }
+    .info__text--04 {
+      top: 323px;
+      right: -170px; } }
+
+@media screen and (max-width: 992px) {
+  .info {
+    display: none; } }
+
 .design {
   padding: 70px 0 0 0; }
   .design__section-title {
@@ -1428,7 +1555,8 @@ img {
       display: inline-block;
       width: 70px;
       height: 70px;
-      background: #E3B873 url(../img/team/2-2.svg) no-repeat center 40%; }
+      background: #E3B873 url(../img/team/2-2.svg) no-repeat center 40%;
+      box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
     .team-card__alice::after {
       content: '';
       position: absolute;
@@ -1437,7 +1565,8 @@ img {
       display: inline-block;
       width: 70px;
       height: 70px;
-      background: #E3B873 url(../img/team/1-1.svg) no-repeat center 40%; }
+      background: #E3B873 url(../img/team/1-1.svg) no-repeat center 40%;
+      box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
     .team-card__david::after {
       content: '';
       position: absolute;
@@ -1446,7 +1575,8 @@ img {
       display: inline-block;
       width: 70px;
       height: 70px;
-      background: #E3B873 url(../img/team/3-3.svg) no-repeat center 40%; }
+      background: #E3B873 url(../img/team/3-3.svg) no-repeat center 40%;
+      box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
     .team-card__text {
       position: relative;
       max-width: 16.57rem;

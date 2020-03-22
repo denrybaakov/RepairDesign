@@ -120,6 +120,10 @@ div
     margin-top: 0.5rem
     text-align: center
     color: tomato
+  &.invalid__info
+    argin-top: 0.5rem
+    text-align: center
+    color: tomato
   &.invalid__footer
     margin-top: 0.5rem
     text-align: center
@@ -132,6 +136,10 @@ input
     &:focus
       border-bottom: 2px solid tomato
   &.invalid__control
+    border-bottom: 2px solid tomato
+    &:focus
+      border-bottom: 2px solid tomato
+  &.invalid__info
     border-bottom: 2px solid tomato
     &:focus
       border-bottom: 2px solid tomato
@@ -153,8 +161,24 @@ div.invalid__control
   left: 0
 
 #controlCheckbox-error
+  font-size: 1rem
   top: 35px
-  left: 40%
+  left: 37%
+#policyCheckbox-error
+  top: 43px
+  left: 0
+  font-size: 1rem
+
+.info-modal
+  &__policy
+    position: relative
+  &__input-group
+    position: relative
+div.invalid__info
+  position: absolute
+  display: block
+  top: 58px
+  left: 0
 
 .footer
   &__policy
@@ -169,8 +193,9 @@ div.invalid__footer
   left: 0
 
 #footerCheckbox-error
+  font-size: 1rem
   top: 35px
-  left: 40%
+  left: 35%
 
 .modal
   &__policy

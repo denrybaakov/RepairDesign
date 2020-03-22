@@ -1,0 +1,104 @@
+.info
+  padding-top: 9.7rem
+  position: relative
+  background: url(../img/info/bg.png) no-repeat left
+  &-col__img
+    position: relative
+    width: 45.428rem
+    height: 45.428rem
+    left: -200px
+    top: 99px
+  &__circle
+    margin-top: -100px
+
+  &-prov
+    position: absolute
+    top: 0
+    right: 0
+  &__col-60
+    max-width: 77.357rem
+    display: flex
+    flex-direction: column
+
+  &__text
+    // position: absolute
+
+    display: flex
+    flex-direction: column
+    max-width: 26rem
+    font-size: 1.285rem
+    &--01
+      position: absolute
+      top: -38px
+      right: -144px
+    &--02
+      position: absolute
+      top: 83px
+      right: 10px
+    &--03
+      position: absolute
+      top: 247px
+      right: -62px
+    &--04
+      position: absolute
+      top: 396px
+      right: -175px
+
+  &__col-30
+    padding-top: 3.5rem
+    max-width: 39% // 42%
+  &-modal
+    max-width: 36.36rem
+    padding: 2rem 3.5rem 1.928rem
+    color: $light
+    background: $dark url(../img/bg-lines.png) no-repeat center
+    z-index: 999
+    &__title
+      margin: 0 0 2.828rem 0
+      +font-FuturaDemi
+      font-size: 1.398rem
+      text-align: center
+    &__form
+      display: flex
+      flex-direction: column
+      align-self: flex-start
+    &__input-group
+      display: flex
+      flex-direction: column
+      margin-bottom: 3.3rem
+      &--last
+        margin-bottom: 1rem
+    &__policy
+      margin-bottom: 2.5rem
+    &__button
+      font-size: 0.928rem
+      font-weight: 500
+      padding: 1.31rem 3rem
+      align-self: flex-end
+
+@media screen and ( max-width: 1200px )
+  .info
+    background-size: 48%
+    &-col__img
+      left: -175px
+      width: 42.428rem
+    &__circle
+      width: 35.142rem
+      margin-top: -87px
+    &__text
+      &--01
+        top: -34px
+        right: -135px
+      &--02
+        top: 65px
+        right: 0px
+      &--03
+        top: 198px
+        right: -64px
+      &--04
+        top: 323px
+        right: -170px
+
+@media screen and (max-width: 992px)
+  .info
+    display: none

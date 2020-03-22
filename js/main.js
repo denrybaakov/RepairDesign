@@ -126,20 +126,14 @@ $(document).ready(function () {
 
   //========================================== END swiper-slider   ==========================
 
-  //==========================================    wow js   ==========================
+  //==========================================    wow js 
   new WOW().init();
 
-
-
-
-
-  // ------------------- main animation 
+  // ========================================= main animation 
   // var sectionTitle = $('.section-title');
-
   // var targetPos = sectionTitle.offset().top;
-  var winHeight = $(window).height();
+  // var winHeight = $(window).height();
   // var scrollToElem = targetPos - winHeight;
-
   // $(window).scroll(function () {
   //   var winScrollTop = $(this).scrollTop();
   //   if (winScrollTop > scrollToElem) {
@@ -150,28 +144,25 @@ $(document).ready(function () {
   //   // console.log(winScrollTop);
   //   console.log(scrollToElem);
   // });
-
   // var designCol = $('.design__col');
   // var targetDesign = designCol.offset().top;
   // var scrollDesign = targetDesign - winHeight;
-
   // $(window).scroll(function () {
   //   var winScrollTop = $(this).scrollTop();
   //   if (winScrollTop > scrollDesign) {
   //     designCol.toggleClass('animateCard');
   //   }
   // });
+  // var typesCol = $('.types__col-30');
+  // var targetTypes = typesCol.offset().top;
+  // var scrollTypes = targetTypes - winHeight;
 
-  var typesCol = $('.types__col-30');
-  var targetTypes = typesCol.offset().top;
-  var scrollTypes = targetTypes - winHeight;
-
-  $(window).scroll(function () {
-    var winScrollTop = $(this).scrollTop();
-    if (winScrollTop > scrollTypes) {
-      typesCol.toggleClass('animateCard');
-    }
-  });
+  // $(window).scroll(function () {
+  //   var winScrollTop = $(this).scrollTop();
+  //   if (winScrollTop > scrollTypes) {
+  //     typesCol.toggleClass('animateCard');
+  //   }
+  // });
 
 
 
@@ -208,7 +199,7 @@ $(document).ready(function () {
         minlength: "Телефон должен быть полным"
       },
       controlCheckbox: {
-        required: "Нужно заполнить"
+        required: "Необходимо дать согласие"
       }
     },
     submitHandler: function (form) {
@@ -237,12 +228,6 @@ $(document).ready(function () {
           // $('.control__form').hide();
           $('.review').addClass('review--visible');
           $('.review__modal').html('<button class="modal__close"></button><h3 class="feedback">Ваша заявка на получение ссылки <span class="feedback__primary">успешно отправлена</span></h3><p class="feedback__description">Наш менеджер отправит Вам ссылку ближайшее время. А пока Вы можете посетить нашу <a href="https://vk.com/" class="feedback__link">группу в Вконтакте</a></p>');
-
-          // $('.modal__close').on('click', function () {
-          //   modal.toggleClass('modal--visible');
-          // });
-
-          // modal.removeClass('modal--visible');
         }
       });
     },
@@ -253,6 +238,70 @@ $(document).ready(function () {
       error.insertAfter($(element));
     }
   });
+
+
+  $('.info-modal__form').validate({
+    errorClass: "invalid__info",
+    errorElement: "div",
+    rules: {
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: {
+        required: true,
+        minlength: 18
+      },
+      userEmail: {
+        required: true,
+        email: true
+      },
+      policyCheckbox: {
+        required: true
+      }
+    },
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче 2-х букв"
+      },
+      userPhone: {
+        required: "Телефон обязательно",
+        minlength: "Телефон должен быть полным"
+      },
+      userEmail: {
+        required: "Обязательно укажите корректный Email",
+        email: "Введите в формате example@mail.ru"
+      },
+      policyCheckbox: {
+        required: "Необходимо дать согласие"
+      }
+    },
+    submitHandler: function (form) {
+      event.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "./send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал. Ответ сервера: ' + response);
+
+          $(form)[0].reset();
+          // $('.control__form').hide();
+          $('.review').addClass('review--visible');
+          $('.review__modal').html('<button class="modal__close"></button><h3 class="feedback">Ваша заявка на выезд замерщика <span class="feedback__primary">успешно отправлена</span></h3><p class="feedback__description">Наш менеджер свяжется с Вами в ближайшее время для уточнения даты выезда замерщика. А пока Вы можете посетить нашу <a href="https://vk.com/" class="feedback__link">группу в Вконтакте</a></p>');
+        }
+      });
+    },
+    errorPlacement: function (error, element) { // -----ошибка checkbox ))))
+      if (element.attr("type") == "checkbox") {
+        return element.next('label').append(error);
+      }
+      error.insertAfter($(element));
+    }
+  });
+
+
 
   $('.footer__form').validate({
     errorClass: "invalid__footer",
@@ -288,7 +337,7 @@ $(document).ready(function () {
         minlength: "Вопроc должен состоять минимум из 8 символов"
       },
       footerCheckbox: {
-        required: "Нужно согласиться"
+        required: "Необходимо дать согласие"
       }
     },
     submitHandler: function (form) {
@@ -298,8 +347,8 @@ $(document).ready(function () {
         url: "./send.php",
         data: $(form).serialize(),
         success: function (response) {
-          console.log('Ajax сработал. Ответ сервера: ' + response);
-          alert("Форма отправлена");
+          // console.log('Ajax сработал. Ответ сервера: ' + response);
+          // alert("Форма отправлена");
           $(form)[0].reset();
           modal.removeClass('modal--visible');
         }
@@ -363,7 +412,7 @@ $(document).ready(function () {
         email: "Введите в формате example@mail.ru"
       },
       policyCheckbox: {
-        required: "Нужно согласиться"
+        required: "Необходимо дать согласие"
       }
     },
     submitHandler: function (form) {
@@ -373,16 +422,12 @@ $(document).ready(function () {
         url: "./send.php",
         data: $(form).serialize(),
         success: function (response) {
-          // console.log('Ajax сработал. Ответ сервера: ' + response);
           $(form)[0].reset();
           $('.modal__form').hide();
           $('.modal__dialog').html('<button class="modal__close"></button><h3 class="feedback">Ваша заявка <span class="feedback__primary">успешно отправлена</span></h3><p class="feedback__description">Наш менеджер свяжеться в ближайшее время. А пока Вы можете посетить нашу <a href="https://vk.com/" class="feedback__link">группу в Вконтакте</a></p>');
-
           $('.modal__close').on('click', function () {
             modal.toggleClass('modal--visible');
           });
-
-          // modal.removeClass('modal--visible');
         }
       });
     },
@@ -394,13 +439,6 @@ $(document).ready(function () {
     }
   });
 
-  $('.policy__checkbox').validate({
-    onclick: false,
-    messages: {
-      onclick: "Нужно согласиться"
-    }
-  });
-
   closeBtn.on('click', function () {
     modal.removeClass('modal--visible');
   });
@@ -408,7 +446,7 @@ $(document).ready(function () {
 
 
 
-  //====================== Yandex Map =================
+  //====================== Yandex Map ==================================
   ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
       center: [55.783635, 49.112424],
