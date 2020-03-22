@@ -1,20 +1,20 @@
-.client 
+.client
   margin-top: 0
   padding-top: 0
   padding-bottom: 27rem
-  background: $light url(../img/client/bg.png) no-repeat bottom / contain 
-  &__heading 
+  background: $light url(../img/client/bg.png) no-repeat bottom / contain
+  &__heading
     margin-bottom: 1rem
-  &__section-description 
+  &__section-description
     margin: 1.314rem auto 3.1rem auto
     font-size: 1.428rem
     max-width: 25.714rem
     text-align: center
-  &__col-30 
+  &__col-30
     position: relative
     padding: 1.714rem 1.428rem
     max-width: 26.857rem
-    background-color: $light 
+    background-color: $light
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04)
   &__head
     margin-bottom: 1.17rem
@@ -23,45 +23,48 @@
     align-items: center
   &__name
     width: 71%
-    +font-YesevaOne 
+    +font-YesevaOne
     font-size: 1.285rem
     line-height: 1.642rem
-  &__feedback 
+  &__feedback
     margin-bottom: 3.85rem
     +font-FuturaBook
     font-size: 1.071rem
     line-height: 180%
     color: $secondary
-  &__group 
-    position: absolute 
+  &__group
+    position: absolute
     left: 0
     bottom: -25px
     display: flex
   &__meter
-
     display: flex
     align-items: center
     margin-right: 0.22rem
     padding: 0.7rem 1.4rem 1rem 1.2rem
     +font-YesevaOne
     font-size: 1.214rem
+    text-decoration: none
     color: $light
     background-color: $primary
     box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5)
     transition: 0.5s
-    &::before 
+    cursor: pointer
+    &::before
       content: ''
       display: inline-block
       margin-right: 1rem
       width: 32px
       height: 31px
       background: url(../img/client/1-1.svg) no-repeat center
-    // &:hover 
-    //   background-color: $hoverColor
-    //   color: $dark
-    // &::before:hover 
-    //   backgroun: url(../img/client/1-1-1.svg) no-repeat center
-  &__day 
+      transition: 0.5s
+    &:hover::before
+      background: url(../img/client/1-1-1.svg) no-repeat center
+    &:hover
+      background-color: $hoverColor
+      color: $dark
+
+  &__day
     // position: absolute 
     display: flex
     align-items: center
@@ -74,31 +77,34 @@
     background-color: $primary
     box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5)
     transition: 0.5s
-    &::before 
+    cursor: pointer
+    &::before
       content: ''
       display: inline-block
       margin-right: 1rem
       width: 32px
       height: 31px
       background: url(../img/client/2-2.svg) no-repeat center
-
-
-
+      transition: 0.5s
+    &:hover::before
+      transition: 0.5s
+      background: url(../img/client/2-2-2.svg) no-repeat center
+    &:hover
+      background-color: $hoverColor
+      color: $dark
 
 .day
   &--first-client
     left: 134px
   &--last-client
     left: 133px
-
-
-
+.link
+  text-decoration: none
 
 @media screen and ( max-width: 1200px )
   .client
-    &__name 
-      max-width: 64% 
-
+    &__name
+      max-width: 64%
 
 @media screen and (max-width: 992px)
   .client

@@ -1223,14 +1223,24 @@ img {
       justify-content: center; }
 
 .video__play {
+  display: block;
   position: relative;
   align-self: center;
   margin-left: -0.4rem;
   margin-top: 0.65rem;
   cursor: pointer;
-  transition: all 0.3s ease-in-out; }
+  transition: all 0.3s ease-in-out;
+  background: #E3B873 url(../img/control/play3.png) no-repeat center;
+  background-position-x: 54%;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%; }
   .video__play:hover {
-    opacity: 0.7; }
+    background: #FFE7C1 url(../img/control/play3-1.png) no-repeat center;
+    background-position-x: 54%; }
+
+svg path:hover {
+  fill: #131313; }
 
 .types__section-title {
   margin-bottom: 2.1rem; }
@@ -1745,17 +1755,25 @@ img {
     font-family: 'Yeseva One Regular', serif;
     font-weight: 400;
     font-size: 1.214rem;
+    text-decoration: none;
     color: #fff;
     background-color: #E3B873;
     box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
-    transition: 0.5s; }
+    transition: 0.5s;
+    cursor: pointer; }
     .client__meter::before {
       content: '';
       display: inline-block;
       margin-right: 1rem;
       width: 32px;
       height: 31px;
-      background: url(../img/client/1-1.svg) no-repeat center; }
+      background: url(../img/client/1-1.svg) no-repeat center;
+      transition: 0.5s; }
+    .client__meter:hover::before {
+      background: url(../img/client/1-1-1.svg) no-repeat center; }
+    .client__meter:hover {
+      background-color: #FFE7C1;
+      color: #131313; }
   .client__day {
     display: flex;
     align-items: center;
@@ -1768,20 +1786,31 @@ img {
     color: #fff;
     background-color: #E3B873;
     box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
-    transition: 0.5s; }
+    transition: 0.5s;
+    cursor: pointer; }
     .client__day::before {
       content: '';
       display: inline-block;
       margin-right: 1rem;
       width: 32px;
       height: 31px;
-      background: url(../img/client/2-2.svg) no-repeat center; }
+      background: url(../img/client/2-2.svg) no-repeat center;
+      transition: 0.5s; }
+    .client__day:hover::before {
+      transition: 0.5s;
+      background: url(../img/client/2-2-2.svg) no-repeat center; }
+    .client__day:hover {
+      background-color: #FFE7C1;
+      color: #131313; }
 
 .day--first-client {
   left: 134px; }
 
 .day--last-client {
   left: 133px; }
+
+.link {
+  text-decoration: none; }
 
 @media screen and (max-width: 1200px) {
   .client__name {

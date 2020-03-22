@@ -73,14 +73,25 @@
 //button-play
 .video
   &__play
+    display: block
     position: relative
     align-self: center
     margin-left: -0.4rem
     margin-top: 0.65rem
     cursor: pointer
     transition: all 0.3s ease-in-out
+    background: $primary url(../img/control/play3.png) no-repeat center
+    background-position-x: 54%
+    width: 85px
+    height: 85px
+    border-radius: 50%
     &:hover
-      opacity: 0.7
+      background: $hoverColor url(../img/control/play3-1.png) no-repeat center
+      background-position-x: 54%
+
+svg path
+  &:hover
+    fill: $dark
 
 // @media screen and (max-width:767px)
 

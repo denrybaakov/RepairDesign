@@ -68,7 +68,7 @@
 
     <section class="section section--dark projects">
       <div class="container">
-        <div class="row projects__row wow zoomIn">
+        <div class="row projects__row">
           <div class="col-40 projects__col-40">
             <div class="section-title section-title--left">
               <h2 class="section-title projects__section-title section-title--dark ">
@@ -176,7 +176,8 @@
         </div>
 
         <div class="video control__video">
-          <img src="img/control/play.svg" alt="Play video" class="video__play">
+          <div class="video__play"></div>
+          <!-- <img src="img/control/play.svg" alt="Play video" class="video__play"> -->
         </div>
         <p class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В
           любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую
@@ -340,8 +341,7 @@
           <div class="info-col info-col__img">
             <img class="info__circle" src="img/info/circleNum.png" alt="">
             <span class="info__text info__text--01">Наш специалист приедет для замеров в день контакта или назначит
-              удобную для вас
-              дату</span>
+              удобную для вас дату</span>
             <span class="info__text info__text--02">Бесплатный замер</span>
             <span class="info__text info__text--03">Бесплатная консультация</span>
             <span class="info__text info__text--04">Получите смету расходов и сроки вашего&nbsp;будущего
@@ -350,7 +350,7 @@
           <div class="col-30 info__col-30">
             <div class="info-modal">
               <h3 class="info-modal__title">Оставьте заявку на бесплатный выезд&nbsp;замерщика</h3>
-              <form action="#" method="POST" class="form info-modal__form">
+              <form action="#" method="POST" class="form info-modal__form" id="info-form">
                 <div class="input-group info-modal__input-group">
                   <label for="infoName" class="label form__label label--light">Имя</label>
                   <input type="text" class="input form__input info-modal__input input--light" id="infoName"
@@ -745,8 +745,8 @@
               профессиональная. Работы выполнены качественно без нареканий. Цены деократические. Я&nbsp;рекомендую этих
               мастеров.</p>
             <div class="client__group">
-              <strong class="client__meter">40 M<sup>2</sup></strong>
-              <strong class="client__day day--last-client">48 дней</strong>
+              <a href="#info-form" class="link"><strong class="client__meter">40 M<sup>2</sup></strong></a>
+              <a href="#info-form" class="link"><strong class="client__day day--last-client">48 дней</strong></a>
             </div>
           </div>
           <div class="col-30 client__col-30">
@@ -756,12 +756,13 @@
             </div>
             <p class="client__feedback">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень
               благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его
-              профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и
+              профессионал href="#info-form"изм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда
+              мобильная и
               профессиональная. Работы выполнены качественно без нареканий. Качество высокое. Я&nbsp;рекомендую этих
               мастеров.</p>
             <div class="client__group">
-              <strong class="client__meter">90 M<sup>2</sup></strong>
-              <strong class="client__day day--last-client">128 дней</strong>
+              <a href="#info-form" class="link"><strong class="client__meter">90 M<sup>2</sup></strong></a>
+              <a href="#info-form" class="link"><strong class="client__day day--last-client">128 дней</strong></a>
             </div>
           </div>
           <div class="col-30 client__col-30">
@@ -776,8 +777,8 @@
               мастеров.
             </p>
             <div class="client__group">
-              <strong class="client__meter">56 M<sup>2</sup></strong>
-              <strong class="client__day day--last-client">86 дней</strong>
+              <a href="#info-form" class="link"><strong class="client__meter">56 M<sup>2</sup></strong></a>
+              <a href="#info-form" class="link"><strong class="client__day day--last-client">86 дней</strong></a>
             </div>
           </div>
         </div>

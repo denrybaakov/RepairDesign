@@ -1,4 +1,16 @@
 $(document).ready(function () {
+  $('.link').click(function () {
+    var elementClick = $('.link').attr("href");
+    var destination = $(elementClick).offset().top - 300;
+
+    // $('body').animate({ scrollTop: destination }, 1100);
+
+    // else {
+    $('html').animate({ scrollTop: destination }, 1100);
+    // }
+    return false
+  });
+
 
   var modal = $('.modal'),
     modalBtn = $('[data-toggle=modal]'),
