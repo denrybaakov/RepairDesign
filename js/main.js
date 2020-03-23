@@ -494,82 +494,101 @@ $(document).ready(function () {
   });
 
 
-
-
-  //====================== Yandex Map ==================================
-  ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-      center: [55.783635, 49.112424],
-      zoom: 16
-    }, {
-      searchControlProvider: 'yandex#search'
-    }),
-
-      // Создаём макет содержимого.
-      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-      ),
-
-      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-        hintContent: 'Наш офис',
-        balloonContent: 'Вход со двора'
-      }, {
-        // Опции.
-        // Необходимо указать данный тип макета.
-        iconLayout: 'default#image',
-        // Своё изображение иконки метки.
-        iconImageHref: 'img/mapMarker.png',
-        // Размеры метки.
-        iconImageSize: [40, 40],
-        // Смещение левого верхнего угла иконки относительно
-        // её "ножки" (точки привязки).
-        iconImageOffset: [-5, -38]
-      });
-
-    myMap.behaviors.disable('scrollZoom');
-    myMap.geoObjects.add(myPlacemark);
-  });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   //=================== Mask Phone =====================
   $('[type=tel]').mask('+7 (000) 000-00-00', { placeholder: "Ваш номер телефона: " });
   // $('[type=tel]').mask('+8 (000) 000-00-00 ', { placeholder: "____________" });
 
 });
+
+
+
+
+//====================== Yandex Map ==================================
+var quality = $('#team');
+var qualityTop = quality.offset().top - 150;
+$(window).bind('scroll', function () {
+  var windowTop = $(this).scrollTop();
+  if (windowTop > qualityTop) {
+    $('#map').html('<script src="https://api-maps.yandex.ru/2.1/?apikey=e6dba517-cc98-484d-aa4e-8c6635e00a49&lang=ru_RU"></script>');
+    $(window).unbind('scroll');
+  } else {
+    console.log('errorr maap');
+  }
+});
+
+
+ymaps.ready(function () {
+  var myMap = new ymaps.Map('map', {
+    center: [55.783635, 49.112424],
+    zoom: 16
+  }, {
+    searchControlProvider: 'yandex#search'
+  }),
+
+    // Создаём макет содержимого.
+    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+      '<div style="color: #e3e3e3; font-weight: bold;">$[properties.iconContent]</div>'
+    ),
+
+    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+      hintContent: 'Наш офис',
+      balloonContent: 'Вход со двора'
+    }, {
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#image',
+      // Своё изображение иконки метки.
+      iconImageHref: 'img/mapMarker.png',
+      // Размеры метки.
+      iconImageSize: [40, 40],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset: [-5, -38]
+    });
+
+
+
+
+  myMap.behaviors.disable('scrollZoom');
+  myMap.geoObjects.add(myPlacemark);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 document.addEventListener('DOMContentLoaded', function (event) {
 

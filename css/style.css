@@ -675,6 +675,19 @@ div.invalid {
     .review__close:hover {
       background: transparent url(../img/x-circle2.svg) no-repeat center; }
 
+.bg-lines {
+  display: block;
+  background: url(../img/lineTypeInfo.svg) no-repeat top/cover;
+  width: 100%;
+  height: 100%;
+  z-index: -99999; }
+
+.bg-lines-team {
+  display: block;
+  background: url(../img/lineTypeInfo.svg) no-repeat top/cover;
+  width: 100%;
+  height: 100%; }
+
 .container {
   max-width: 1256px;
   width: 85%;
@@ -1711,7 +1724,7 @@ svg path:hover {
   margin-top: 0;
   padding-top: 0;
   padding-bottom: 27rem;
-  background: #fff url(../img/client/bg.png) no-repeat bottom/contain; }
+  background: url(../img/client/bg.png) no-repeat bottom/contain; }
   .client__heading {
     margin-bottom: 1rem; }
   .client__section-description {
