@@ -10,6 +10,44 @@ $(document).ready(function () {
     // }
     return false
   });
+  $('.scroll-down').click(function () {
+    var elementClick = $(this).attr("href");
+    var destination = $(elementClick).offset().top - 180;
+
+    // $('body').animate({ scrollTop: destination }, 1100);
+
+    $('html').animate({ scrollTop: destination }, 1100);
+  });
+  //--links
+  $('.nav__item-projects').click(function () {
+    var elementClick = $(this).attr("href");
+    var destination = $(elementClick).offset().top - 180;
+    $('html').animate({ scrollTop: destination }, 1100);
+  })
+  $('.nav__item-info').click(function () {
+    var elementClick = $(this).attr("href");
+    var destination = $(elementClick).offset().top;
+    $('html').animate({ scrollTop: destination }, 1100);
+  })
+  $('.nav__item-team').click(function () {
+    var elementClick = $(this).attr("href");
+    var destination = $(elementClick).offset().top - 50;
+    $('html').animate({ scrollTop: destination }, 1100);
+  })
+  $('.nav__item-feedback').click(function () {
+    var elementClick = $(this).attr("href");
+    var destination = $(elementClick).offset().top - 120;
+    $('html').animate({ scrollTop: destination }, 1100);
+  })
+  $('.nav__item-contacts').click(function () {
+    var elementClick = $(this).attr("href");
+    var destination = $(elementClick).offset().top - 340;
+    $('html').animate({ scrollTop: destination }, 1100);
+  })
+
+
+
+
 
 
   var modal = $('.modal'),
