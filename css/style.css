@@ -1466,6 +1466,7 @@ svg path:hover {
     margin-top: 0.357rem;
     margin-bottom: 6.375rem;
     font-size: 1.928rem;
+    font-weight: 400;
     letter-spacing: 0;
     line-height: 2.64rem;
     text-align: left;
@@ -1841,6 +1842,7 @@ svg path:hover {
     max-width: 63.07rem;
     margin: -18.84rem auto 3.814rem auto;
     padding: 2.5rem;
+    background: url(../img/lineFooter.svg) no-repeat center/cover;
     background-color: #131313; }
   .footer__title {
     margin-top: 0;
@@ -1879,9 +1881,11 @@ svg path:hover {
     padding: 4.285rem 0;
     background-color: #181818; }
   .footer__map {
+    position: relative;
     display: flex;
     justify-content: center;
-    margin-bottom: 4rem; }
+    margin-bottom: 4rem;
+    background: url(../img/map.png) no-repeat center; }
   .footer__subtitle {
     max-width: 42.07rem;
     margin: 0 auto 1.557rem auto;
@@ -1925,6 +1929,39 @@ svg path:hover {
 .map {
   height: 33.214rem;
   width: 66.07rem; }
+
+.loader {
+  position: absolute;
+  z-index: 15;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #000000;
+  transition: opacity .7s ease;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.55); }
+
+.loader:after, .loader:before {
+  box-sizing: border-box; }
+
+.loader.is-active {
+  top: 0;
+  display: block; }
+
+.loader-default:after {
+  position: absolute;
+  top: calc(50% - 24px);
+  left: calc(50% - 24px);
+  width: 48px;
+  height: 48px;
+  content: '';
+  -webkit-animation: rotation 1s linear infinite;
+  animation: rotation 1s linear infinite;
+  border: solid 8px #ffffff;
+  border-left-color: transparent;
+  border-radius: 50%; }
 
 @media screen and (max-width: 992px) {
   .footer__wrap {
@@ -1977,6 +2014,30 @@ svg path:hover {
   .map {
     height: 18.214rem;
     width: 66.07rem; } }
+
+@-webkit-keyframes rotation {
+  from {
+    transform: rotate(0); }
+  to {
+    transform: rotate(359deg); } }
+
+@keyframes rotation {
+  from {
+    transform: rotate(0); }
+  to {
+    transform: rotate(359deg); } }
+
+@-webkit-keyframes blink {
+  from {
+    opacity: .5; }
+  to {
+    opacity: 1; } }
+
+@keyframes blink {
+  from {
+    opacity: .5; }
+  to {
+    opacity: 1; } }
 
 .modal {
   opacity: 0;
