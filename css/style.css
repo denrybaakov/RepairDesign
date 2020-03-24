@@ -463,6 +463,8 @@ a:focus {
   border: none;
   border-radius: 0;
   border-bottom: 2px solid rgba(54, 54, 54, 0.3); }
+  .input:placeholder {
+    color: #fff; }
   .input--light::-webkit-input-placeholder {
     color: #fff; }
   .input--light::-moz-placeholder {
@@ -472,6 +474,8 @@ a:focus {
   .input--light::-ms-input-placeholder {
     color: #fff; }
   .input--light::placeholder {
+    color: #fff; }
+  .input--light::-moz-placeholder {
     color: #fff; }
   .input:focus {
     outline: none;

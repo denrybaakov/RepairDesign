@@ -24,27 +24,30 @@ $(document).ready(function () {
   $('.nav__item-projects').click(function () {
     var elementClick = $(this).attr("href");
     var destination = $(elementClick).offset().top - 180;
-    $('html').animate({ scrollTop: destination }, 1100);
+    $('html, body').animate({ scrollTop: destination }, 1100);
   })
   $('.nav__item-info').click(function () {
     var elementClick = $(this).attr("href");
     var destination = $(elementClick).offset().top;
-    $('html').animate({ scrollTop: destination }, 1100);
+    $('html, body').animate({ scrollTop: destination }, 1100);
   })
   $('.nav__item-team').click(function () {
     var elementClick = $(this).attr("href");
     var destination = $(elementClick).offset().top - 50;
-    $('html').animate({ scrollTop: destination }, 1100);
+    $('html, body').animate({ scrollTop: destination }, 1100);
   })
   $('.nav__item-feedback').click(function () {
     var elementClick = $(this).attr("href");
     var destination = $(elementClick).offset().top - 120;
-    $('html').animate({ scrollTop: destination }, 1100);
+    $('html, body').animate({ scrollTop: destination }, 1100);
   })
   $('.nav__item-contacts').click(function () {
     var elementClick = $(this).attr("href");
     var destination = $(elementClick).offset().top - 340;
-    $('html').animate({ scrollTop: destination }, 1100);
+    $('html, body').animate({ scrollTop: destination }, 1100);
+  })
+  $('.nav__item-index').click(function () {
+    $('html, body').animate({ scrollTop: 0 }, 1800, "swing");
   })
 
 
@@ -62,6 +65,26 @@ $(document).ready(function () {
     content.addClass('interior__col-60--active');
   });
 
+
+  //-----видео 
+  var player;
+  var btnVideo = $('.video__play');
+  btnVideo.click(function onYouTubeIframeAPIReady() {
+
+    player = new YT.Player('player', {
+      height: '100%',
+      width: '100%',
+      videoId: 'BY9v5jOr4BY',
+      events: {
+        'onReady': videoPlay
+      }
+    });
+
+    function videoPlay(event) {
+
+      event.target.playVideo();
+    }
+  });
 
 
 
@@ -115,7 +138,7 @@ $(document).ready(function () {
   scrollBtn.on('click', function (event) {
     event.preventDefault();
     event.stopPropagation();
-    $('html, body').animate({ scrollTop: 0 }, 1000, "swing");
+    $('html, body').animate({ scrollTop: 0 }, 1800, "swing");
   });
 
 
@@ -597,7 +620,7 @@ function init() {
     zoom: 16, // коэффициент приближения карты
     controls: ['zoomControl', 'fullscreenControl'] // выбираем только те функции, которые необходимы при использовании
   });
-  var myPlacemarkTemp = new ymaps.Placemark([55.730138, 37.594238], {
+  var myPlacemarkTemp = new ymaps.Placemark(myMapTemp.getCenter(), {
     balloonContent: "Здесь может быть ваш адрес",
   }, {
     // Опции.

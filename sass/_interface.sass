@@ -60,9 +60,13 @@ a
   border: none
   border-radius: 0
   border-bottom: 2px solid rgba(54,54,54,0.3)
+  &:placeholder
+    color: $light
 
   &--light
     &::placeholder
+      color: $light
+    &::-moz-placeholder
       color: $light
   &:focus
     outline: none
