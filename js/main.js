@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+  //------прокрутка
   $('.link').click(function () {
     var elementClick = $('.link').attr("href");
     var destination = $(elementClick).offset().top - 300;
@@ -45,6 +47,20 @@ $(document).ready(function () {
     $('html').animate({ scrollTop: destination }, 1100);
   })
 
+
+
+
+
+  //----ТАБЫ 
+  $('.interior-list__item').click(function () {
+    var id = $(this).attr('data-tab'),
+      content = $('.interior__col-60[data-tab="' + id + '"]');
+    $('.interior-list__item.interior-list__item--active').removeClass('interior-list__item--active');
+    $(this).addClass('interior-list__item--active');
+
+    $('.interior__col-60.interior__col-60--active').removeClass('interior__col-60--active');
+    content.addClass('interior__col-60--active');
+  });
 
 
 
@@ -172,6 +188,17 @@ $(document).ready(function () {
     var index = mySwiperTarget[0].realIndex;
     block.removeClass('target-block__item--active');
     block.eq(index).addClass('target-block__item--active');
+  });
+
+
+  //------interior slide 
+  var interiorSwiper = new Swiper('.swiper-interior', {
+    loop: true,
+    // effect: 'fade',
+    navigation: {
+      nextEl: '.swiper-interior-next',
+      prevEl: '.swiper-interior-prev'
+    },
   });
 
   //========================================== END swiper-slider   ==========================

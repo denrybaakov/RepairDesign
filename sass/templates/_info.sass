@@ -1,7 +1,9 @@
 .info
   padding-top: 9.7rem
+  padding-bottom: 16.7rem
   position: relative
   background: url(../img/info/bg.png) no-repeat left
+  background-position-y: 78px
   &-col__img
     position: relative
     width: 45.428rem
@@ -46,8 +48,9 @@
 
   &__col-30
     padding-top: 3.5rem
-    max-width: 39% // 42%
+    max-width: 40% // 42% //39
   &-modal
+    margin-bottom: 2.12rem
     max-width: 36.36rem
     padding: 2rem 3.5rem 1.928rem
     color: $light
@@ -69,12 +72,33 @@
       &--last
         margin-bottom: 1rem
     &__policy
-      margin-bottom: 2.5rem
+      margin-bottom: 1.5rem
     &__button
       font-size: 0.928rem
       font-weight: 500
       padding: 1.31rem 3rem
       align-self: flex-end
+
+  &-money
+    padding-left: 2.3rem
+    display: flex
+    align-items: center
+    &__box
+      display: inline-block
+      min-width: 72px
+      min-height: 72px
+      background: $primary url(../img/info/money.svg) no-repeat center
+      border-radius: 50%
+      transition: 0.5s
+      &:hover
+        background: $hoverColor url(../img/info/money2.svg) no-repeat center
+    &__text
+      margin-left: 1.821rem
+      +font-FuturaDemi
+      font-size: 1.428rem
+      line-height: 1.785rem
+      max-width: 22.714rem
+      color: $primary
 
 @media screen and ( max-width: 1200px )
   .info

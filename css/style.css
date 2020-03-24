@@ -1305,8 +1305,10 @@ svg path:hover {
 
 .info {
   padding-top: 9.7rem;
+  padding-bottom: 16.7rem;
   position: relative;
-  background: url(../img/info/bg.png) no-repeat left; }
+  background: url(../img/info/bg.png) no-repeat left;
+  background-position-y: 78px; }
   .info-col__img {
     position: relative;
     width: 45.428rem;
@@ -1346,8 +1348,9 @@ svg path:hover {
       right: -175px; }
   .info__col-30 {
     padding-top: 3.5rem;
-    max-width: 39%; }
+    max-width: 40%; }
   .info-modal {
+    margin-bottom: 2.12rem;
     max-width: 36.36rem;
     padding: 2rem 3.5rem 1.928rem;
     color: #fff;
@@ -1370,12 +1373,33 @@ svg path:hover {
       .info-modal__input-group--last {
         margin-bottom: 1rem; }
     .info-modal__policy {
-      margin-bottom: 2.5rem; }
+      margin-bottom: 1.5rem; }
     .info-modal__button {
       font-size: 0.928rem;
       font-weight: 500;
       padding: 1.31rem 3rem;
       align-self: flex-end; }
+  .info-money {
+    padding-left: 2.3rem;
+    display: flex;
+    align-items: center; }
+    .info-money__box {
+      display: inline-block;
+      min-width: 72px;
+      min-height: 72px;
+      background: #E3B873 url(../img/info/money.svg) no-repeat center;
+      border-radius: 50%;
+      transition: 0.5s; }
+      .info-money__box:hover {
+        background: #FFE7C1 url(../img/info/money2.svg) no-repeat center; }
+    .info-money__text {
+      margin-left: 1.821rem;
+      font-family: 'Futura Demi', sans-serif;
+      font-weight: 400;
+      font-size: 1.428rem;
+      line-height: 1.785rem;
+      max-width: 22.714rem;
+      color: #E3B873; }
 
 @media screen and (max-width: 1200px) {
   .info {
@@ -1403,8 +1427,150 @@ svg path:hover {
   .info {
     display: none; } }
 
+.interior {
+  padding-bottom: 0;
+  position: relative;
+  max-height: 61.6rem;
+  background: #131313 url(../img/interior/bg2.jpg) no-repeat center/cover;
+  color: #fff; }
+  .interior__col-30 {
+    max-width: 36%;
+    margin-right: 4rem; }
+  .interior__section-title {
+    margin-top: 4.7rem;
+    max-width: 29rem;
+    font-family: 'Yeseva One Regular', serif;
+    font-weight: 400;
+    font-size: 1.928rem;
+    line-height: 2.642rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    color: #E3B873;
+    z-index: 33; }
+  .interior-list {
+    padding: 0;
+    list-style: none; }
+    .interior-list__item {
+      position: relative;
+      margin-bottom: 0.55rem;
+      font-family: 'Futura Book', sans-serif;
+      font-weight: 400;
+      font-size: 1.728rem;
+      line-height: 172.4%;
+      cursor: pointer; }
+      .interior-list__item--active {
+        color: #E3B873; }
+        .interior-list__item--active::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 145px;
+          height: 1px;
+          background-color: #E3B873; }
+  .interior__col-60 {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    flex-direction: row; }
+    .interior__col-60--active {
+      visibility: visible;
+      opacity: 1;
+      display: flex; }
+  .interior__img {
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column; }
+    .interior__img:last-child {
+      margin-right: 1rem; }
+    .interior__img--top {
+      margin-top: -8rem; }
+    .interior__img--down {
+      margin-top: -13rem; }
+    .interior__img--pic-1 {
+      margin-bottom: 2.857rem; }
+    .interior__img--pic-3 {
+      margin-bottom: 2.857rem; }
+
+.swiper-slide-mob {
+  display: none; }
+
+@media screen and (max-width: 1200px) {
+  .interior {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    max-height: 54.6rem; }
+    .interior__row {
+      justify-content: space-between; }
+    .interior__section-title {
+      margin-top: 0; }
+    .interior__col-30 {
+      max-width: 33%;
+      margin-right: 4.5rem; } }
+
+@media screen and (max-width: 992px) {
+  .interior {
+    display: none; }
+  .swiper-slide-mob {
+    display: block; }
+  .swiper-slide-mob {
+    margin-bottom: -12rem; }
+  .swiper-section-title {
+    font-family: 'Yeseva One Regular', serif;
+    font-weight: 400;
+    font-size: 1.928rem;
+    line-height: 2.642rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    color: #E3B873; }
+  .swiper-interior {
+    position: relative; }
+    .swiper-interior-next {
+      position: absolute;
+      top: 43%;
+      right: 8px;
+      width: 46px;
+      height: 46px;
+      background: #E3B873 url(../img/interior/next.svg) no-repeat center;
+      border-radius: 50%;
+      z-index: 99; }
+      .swiper-interior-next:active {
+        outline: none;
+        box-shadow: none; }
+      .swiper-interior-next:focus {
+        outline: none;
+        box-shadow: none; }
+    .swiper-interior-prev {
+      position: absolute;
+      top: 43%;
+      left: 11px;
+      width: 46px;
+      height: 46px;
+      background: #E3B873 url(../img/interior/prev.svg) no-repeat center;
+      border-radius: 50%;
+      z-index: 99; }
+      .swiper-interior-prev:active {
+        outline: none;
+        box-shadow: none; }
+      .swiper-interior-prev:focus {
+        outline: none;
+        box-shadow: none; } }
+
+@media screen and (max-width: 450px) {
+  .swiper-slide-mob {
+    margin-bottom: -8rem; }
+  .swiper-section-title {
+    font-size: 1.57rem; }
+  .swiper-interior-next {
+    width: 36px;
+    height: 36px; }
+  .swiper-interior-prev {
+    width: 36px;
+    height: 36px; } }
+
 .design {
-  padding: 70px 0 0 0; }
+  padding: 9.8rem 0 0 0; }
   .design__section-title {
     margin-bottom: 1.4rem; }
   .design__section-description {
@@ -1458,6 +1624,18 @@ svg path:hover {
     .design-card__pricetag:hover {
       background-color: #FFE7C1;
       color: #131313; }
+
+@media screen and (max-width: 1200px) {
+  .design {
+    padding: 12.8rem 0 0 0; } }
+
+@media screen and (max-width: 992px) {
+  .design {
+    padding: 19.8rem 0 0 0; } }
+
+@media screen and (max-width: 450px) {
+  .design {
+    padding: 14.8rem 0 0 0; } }
 
 .target {
   padding-top: 29.3rem;
@@ -1925,6 +2103,12 @@ svg path:hover {
   transition: background 0.5s; }
   .icon__insta:hover {
     background: #FFE7C1 url(../img/footer/insta2.svg) no-repeat center; }
+
+.footer__map {
+  max-width: 66.07rem;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 3rem; }
 
 .map {
   height: 33.214rem;

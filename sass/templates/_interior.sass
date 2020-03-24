@@ -1,0 +1,172 @@
+.interior
+  padding-bottom: 0
+  position: relative
+  max-height: 61.6rem
+  background: $dark url(../img/interior/bg2.jpg) no-repeat center / cover
+  color: $light
+  &__col-30
+    max-width: 36%
+    margin-right: 4rem
+  &__section-title
+    margin-top: 4.7rem
+    max-width: 29rem
+    +font-YesevaOne
+    font-size: 1.928rem
+    line-height: 2.642rem
+    text-transform: uppercase
+    margin-bottom: 3rem
+    color: $primary
+    z-index: 33
+  &-list
+    padding: 0
+    list-style: none
+    &__item
+      position: relative
+      margin-bottom: 0.55rem
+      +font-FuturaBook
+      font-size: 1.728rem
+      line-height: 172.4%
+      cursor: pointer
+      &--active
+        color: $primary
+        &::before
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 145px
+          height: 1px
+          background-color: $primary
+  &__col-60
+    visibility: hidden
+    opacity: 0
+    display: none
+    flex-direction: row
+    &--active
+      visibility: visible
+      opacity: 1
+      display: flex
+  &__img
+    margin-right: 2rem
+    display: flex
+    flex-direction: column
+    &:last-child
+      margin-right: 1rem
+    &--top
+      margin-top: -8rem
+    &--down
+      margin-top: -13rem
+    &--pic-1
+      margin-bottom: 2.857rem
+    &--pic-3
+      margin-bottom: 2.857rem
+
+.swiper-slide-mob
+  display: none
+
+@media screen and ( max-width: 1200px )
+  .interior
+    padding-top: 5rem
+    padding-bottom: 5rem
+    max-height: 54.6rem
+    &__row
+      justify-content: space-between
+      // flex-wrap: wrap
+    &__section-title
+      margin-top: 0
+    &__col-30
+      max-width: 33%
+      margin-right: 4.5rem
+    &__img
+      &--down
+
+@media screen and (max-width: 992px)
+  .interior
+    display: none
+  .swiper-slide-mob
+    display: block
+  .swiper
+    &-slide-mob
+      margin-bottom: -12rem
+    &-section-title
+      +font-YesevaOne
+      font-size: 1.928rem
+      line-height: 2.642rem
+      text-align: center
+      text-transform: uppercase
+      margin-bottom: 3rem
+      color: $primary
+
+  .swiper-interior
+    position: relative
+    &-next
+      position: absolute
+      top: 43%
+      right: 8px
+      width: 46px
+      height: 46px
+      background: $primary url(../img/interior/next.svg) no-repeat center
+      border-radius: 50%
+      z-index: 99
+      &:active
+        outline: none
+        box-shadow: none
+      &:focus
+        outline: none
+        box-shadow: none
+    &-prev
+      position: absolute
+      top: 43%
+      left: 11px
+      width: 46px
+      height: 46px
+      background: $primary url(../img/interior/prev.svg) no-repeat center
+      border-radius: 50%
+      z-index: 99
+      &:active
+        outline: none
+        box-shadow: none
+      &:focus
+        outline: none
+        box-shadow: none
+
+@media screen and (max-width: 450px)
+  .swiper
+    &-slide-mob
+      margin-bottom: -8rem
+    &-section-title
+      font-size: 1.57rem
+  .swiper-interior
+    &-next
+      width: 36px
+      height: 36px
+    &-prev
+      width: 36px
+      height: 36px
+
+//   .interior
+//     &__row
+//       flex-wrap: wrap
+//     &__col-30
+//       max-width: 100%
+//     &__col-60
+//       width: 100%
+//     &-list
+//       display: flex
+//       justify-content: space-around
+//       flex-wrap: wrap
+//       &__item
+//         margin: 0.5rem
+//         max-width: 30%
+//     &__col-60
+//       justify-content: space-between
+//     &__img
+//       display: flex
+//       flex-direction: row
+//       justify-content: space-between
+//       // flex-direction: row
+//       // flex-wrap: wrap
+//       max-width: 30%
+//       &--pic-2
+//         max-width: 353px
+//         max-height: 349px
