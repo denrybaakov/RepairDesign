@@ -57,12 +57,28 @@
     &--down
       margin-top: -13rem
     &--pic-1
+      min-height: 540px
       margin-bottom: 2.857rem
     &--pic-3
       margin-bottom: 2.857rem
 
 .swiper-slide-mob
   display: none
+
+@media screen and ( max-width: 1400px )
+  .interior
+    height: 864px
+    &__col-30
+      max-width: 33%
+    &__img
+      &--pic-1
+        height: 557px
+      &--pic-2
+        height: 350px
+      &--pic-3
+        height: 275px
+      &--pic-4
+        height: 625px
 
 @media screen and ( max-width: 1200px )
   .interior
@@ -75,14 +91,37 @@
     &__section-title
       margin-top: 0
     &__col-30
-      max-width: 33%
-      margin-right: 4.5rem
+      max-width: 34%
+      margin-right: 5.5rem
     &__img
-      &--down
+      &--pic-1
+        object-fit: cover
+        // height: 440px
+        // max-height: 540px
+        // max-width: 353px
+        // width: 100%
+      &--pic-2
+        height: 200px
+        object-fit: cover
+      &--pic-3
+        height: 215px
+      &--pic-4
+        object-fit: cover
+        // min-height: 40px
+        height: 440px
+        max-width: 353px
+        width: 100%
+
+  .interior__img--pic-1
+    height: 10px
 
 @media screen and (max-width: 992px)
   .interior
     display: none
+    visibility: hidden
+    opacity: 0
+    &__row
+      display: none
   .swiper-slide-mob
     display: block
   .swiper
@@ -133,10 +172,14 @@
 @media screen and (max-width: 450px)
   .swiper
     &-slide-mob
-      margin-bottom: -8rem
+      margin-bottom: -10rem
+      &__img
+        object-fit: cover
+        min-height: 242px
     &-section-title
-      font-size: 1.57rem
+      font-size: 1.77rem
   .swiper-interior
+    min-height: 242px
     &-next
       width: 36px
       height: 36px

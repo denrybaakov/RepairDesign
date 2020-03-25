@@ -132,7 +132,12 @@
     &__scroll-down
       display: none
 
+@media screen and (max-height: 450px)
+  .modal
+    overflow: scroll
+
 @media screen and (max-width: 576px)
+
   //--------------------control -------------------
   .control
     padding-bottom: 0
@@ -175,7 +180,7 @@
     &__col-30
       max-width: 100%
     &__text
-      margin: -4.45rem auto 0 0
+      margin: -11.45rem auto 0 0
       max-width: 23.57rem //добавил новый трюк
 
   .contacts
@@ -192,6 +197,9 @@
     &__content
       max-width: 22.86rem
       margin: 0 auto
+    &__title
+      max-width: 100%
+      min-width: 25rem
     &__text
       font-size: 1.29rem
       margin-bottom: 3.8rem
@@ -228,41 +236,73 @@
     left: 20%
 
   .scroll-top
+    z-index: 9999999
     bottom: 5rem
 
 @media screen and (max-width: 450px)
+  .container
+    width: 92% //88
   .hero
+    &__content
+      max-width: 100%
+      width: 100%
+      margin: 0
+    &__text
+      font-size: 1.285rem
+      max-width: 22.76rem
     &__button
       font-size: 0.928rem
+      width: 100%
+      max-width: 100%
+    &__title
+      width: 60%
+
+  .video__play
+    width: 45px
+    height: 45px
+    background-size: 32%
   .control
     &__video
-      min-height: 14rem
+      min-height: 17rem
     &__button
       font-size: 1.13rem
   .policy__label
     font-size: 1.142rem
 
+  .section-title__word
+    display: block
+    text-align: left
+
   .projects
+    padding-top: 0
+    &__section-title
+      text-align: left
+    &__section-description
+      text-align: left
+      letter-spacing: 0.03rem
     &__col-40
       min-width: auto
       max-width: 100%
     &__col-60
       left: 52%
-      top: 26.5rem
+      top: 27.5rem
       max-width: 100%
 
     &__navigation
-      left: 50%
-      right: 50%
-      margin-left: -76px
-      transform: translate(-40%,-50%)
+      top: 86%
+      // left: 38%
+      // right: 50%
+      margin-left: -70px
+      transform: translate(-30%,-50%)
 
   .section-title__heading
-    font-size: 1.57rem
+    font-size: 1.97rem
   .section-description
     font-size: 14px
   .swiper
     &-slide
+      &__content
+        padding: 0
       &__heading
         font-size: 12px
       &__text
@@ -272,4 +312,14 @@
     &-title--left
       margin-bottom: 85% //24rem
 
-  //footer 
+  .types
+    &__section-title
+      margin-bottom: 3.1rem
+    &__col-30
+      max-width: 100%
+    &__text
+      margin: -11.75rem auto 0 0
+      max-width: 22rem
+
+  div.invalid__footer
+    top: 43px

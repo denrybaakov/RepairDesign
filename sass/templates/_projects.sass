@@ -1,7 +1,7 @@
 .projects
   padding-top: 9rem
   padding-bottom: 27.2rem
-  &__section-title 
+  &__section-title
     margin-top: 0
     +font-YesevaOne
     font-size: 1.92rem
@@ -10,46 +10,41 @@
     text-align: left
     color: $primary
   &__section-description
-    margin-bottom: 2.29rem;
+    margin-bottom: 2.29rem
     color: $light
   &__navigation
     position: absolute
-    top: 230px
+    top: 242px //272 - mb 8.8rem
     left: 0
     // height: 10px
     // top: -10px
     // left: 0
     // display: flex
     // flex-direction: column
-  &__image 
+  &__image
     width: 93%
     height: 100%
 
-
-
-
-
-
 .swiper
-  &__navigation 
-    left: 42px;
-    top: -11px; 
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  
+  &__navigation
+    left: 42px
+    top: -11px
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+
   &-slide
     display: flex
     flex-wrap: wrap
     &__content
-      margin-bottom: 5.8rem
+      margin-bottom: 8.8rem
       padding-right: 9rem
-    &__text 
+    &__text
       flex-basis: 50%
-      min-width: 40%;
+      min-width: 40%
       // margin-bottom: 0.9rem;
       padding-bottom: 1.35rem
-    &__value 
+    &__value
       letter-spacing: 1px
       line-height: 1.3rem
     &__heading
@@ -60,17 +55,17 @@
       text-transform: uppercase
       color: $primary
     &__image
-      justify-content: space-around;
-      padding-left: 2rem;
+      justify-content: space-around
+      padding-left: 2rem
 
   &-pagination
     &-bullets
-      width: auto 
-      
+      width: auto
+
     &-bullet
       margin-left: 20px
       background-color: rgba($light, 0.3)
-      &-active 
+      &-active
         background-color: $light
 
   &-button
@@ -85,53 +80,47 @@
         display: none
     &-prev
       left: 0
-      background: url(../img/arrov-prev.svg) no-repeat center 
-    &-next 
-      background: url(../img/arrov-next.svg) no-repeat center 
+      background: url(../img/arrov-prev.svg) no-repeat center
+    &-next
+      background: url(../img/arrov-next.svg) no-repeat center
   &-button
     &-next:focus
-      outline: none 
-      box-shadow: none
-    &-prev:focus 
       outline: none
       box-shadow: none
-
+    &-prev:focus
+      outline: none
+      box-shadow: none
 
 .swiper-container-horizontal>.swiper-pagination-bullets
   width: auto
   bottom: -2px
 
-
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
-  margin: 0px 10px;
-
-
-
+  margin: 0px 10px
 
 @media screen and ( max-width: 1200px )
   .projects
     &__row
       align-items: center
     &__navigation
-      display: flex 
-
+      display: flex
 
   .col-60
     min-width: 40%
-  
+
   .swiper
     &-slide
-      &__content 
+      &__content
         padding-right: 0
       &__image
         // padding: 1rem
-  
+
 @media screen and (max-width: 992px)
   .projects
     &__image
       width: auto
       height: 100%
-      object-fit: cover;
+      object-fit: cover
 
 @media screen and (max-width: 767px)
   .projects
@@ -142,7 +131,7 @@
       order: 2
     &__col-60
       order: 1
-    &__navigation 
+    &__navigation
       top: 230px
       left: 70px
     &__image
@@ -157,19 +146,3 @@
         padding: 0
 
       &__pagination
-
-
-  
-
-  
-
-
-
-
-
-
-
-
-
-
- 

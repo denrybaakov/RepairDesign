@@ -16,7 +16,7 @@
 
 <body>
   <!-- Yandex.Metrika counter -->
-  <script type="text/javascript">
+  <script>
     (function (m, e, t, r, i, k, a) {
       m[i] = m[i] || function () {
         (m[i].a = m[i].a || []).push(arguments)
@@ -410,19 +410,19 @@
 
       <div class="container swiper-slide-mob">
         <h2 class="swiper-section-title">Мы реализуем
-          ваши самые&nbsp;смелые&nbsp;фантазии
+          ваши самые&nbsp;смелые фантазии
         </h2>
         <div class="swiper-container swiper-interior">
           <div class="swiper-wrapper wrapper-interior">
             <!-- Slides -->
             <div class="swiper-slide">
-              <img src="img/interior/bg.jpg" alt="Интерьеры квартиры">
+              <img class="swiper-slide-mob__img" src="img/interior/bg.jpg" alt="Интерьеры квартиры">
             </div>
             <div class="swiper-slide">
-              <img src="img/interior/1mob.jpg" alt="Интерьеры квартиры">
+              <img class="swiper-slide-mob__img" src="img/interior/1mob.jpg" alt="Интерьеры квартиры">
             </div>
             <div class="swiper-slide">
-              <img src="img/interior/2mob.jpg" alt="Интерьеры квартиры">
+              <img class="swiper-slide-mob__img" src="img/interior/2mob.jpg" alt="Интерьеры квартиры">
             </div>
           </div>
           <!-- If we need navigation buttons -->
@@ -434,7 +434,7 @@
 
     <section class="section interior">
       <div class="container">
-        <div class="row interior__row wow fadeInUp" data-wow-delay="1s">
+        <div class="row interior__row">
           <div class="col-30 interior__col-30">
             <h2 class="section-title--dark interior__section-title">Мы реализуем
               ваши самые&nbsp;смелые&nbsp;фантазии
@@ -1089,7 +1089,7 @@
           <input type="tel" class="input form__input modal__input input--light" id="user-phone" name="userPhone"
             placeholder="Ваш номер телефона:">
         </div>
-        <div class="input-group modal__input-group">
+        <div class="input-group modal__input-group modal__input-group--last">
           <label for="user-email" class="label form__label label--light">Email</label>
           <input type="email" class="input form__input modal__input input--light" name="userEmail" id="user-email"
             placeholder="Ваш Email">
