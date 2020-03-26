@@ -523,11 +523,13 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           $(form)[0].reset();
-          $('.modal__form').hide();
-          $('.modal__dialog').html('<button class="modal__close"></button><h3 class="feedback">Ваша заявка <span class="feedback__primary">успешно отправлена</span></h3><p class="feedback__description">Наш менеджер свяжеться в ближайшее время. А пока Вы можете посетить нашу <a href="https://vk.com/" class="feedback__link">группу в Вконтакте</a></p>');
-          $('.modal__close').on('click', function () {
-            modal.toggleClass('modal--visible');
-          });
+          // $('.modal__form').hide();
+          // $('.modal__dialog').html('<button class="modal__close"></button><h3 class="feedback">Ваша заявка <span class="feedback__primary">успешно отправлена</span></h3><p class="feedback__description">Наш менеджер свяжеться в ближайшее время. А пока Вы можете посетить нашу <a href="https://vk.com/" class="feedback__link">группу в Вконтакте</a></p>');
+          // $('.modal__close').on('click', function () {
+          //   modal.toggleClass('modal--visible');
+          // });
+          $('.review').addClass('review--visible');
+          $('.review__modal').html('<button class="modal__close"></button><h3 class="feedback">Ваша заявка <span class="feedback__primary">успешна отправлена</span></h3><p class="feedback__description">Наш менеджер свяжеться с Вами в ближайшее время. А пока Вы можете посетить нашу <a href="https://vk.com/" class="feedback__link">группу в Вконтакте</a></p>');
         }
       });
     },

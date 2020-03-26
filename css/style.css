@@ -1008,7 +1008,7 @@ img {
     color: #fff; }
   .projects__navigation {
     position: absolute;
-    top: 242px;
+    top: 276px;
     left: 0; }
   .projects__image {
     width: 93%;
@@ -1102,7 +1102,9 @@ img {
     width: auto;
     height: 100%;
     -o-object-fit: cover;
-    object-fit: cover; } }
+    object-fit: cover; }
+  .swiper-slide__content {
+    margin-bottom: 10.8rem; } }
 
 @media screen and (max-width: 767px) {
   .projects__row {
@@ -1609,7 +1611,7 @@ svg path:hover {
   .swiper-section-title {
     font-size: 1.77rem; }
   .swiper-interior {
-    min-height: 242px; }
+    height: 242px; }
     .swiper-interior-next {
       width: 36px;
       height: 36px; }
@@ -1683,16 +1685,19 @@ svg path:hover {
 
 @media screen and (max-width: 450px) {
   .design {
-    padding: 14.8rem 0 0 0; }
+    padding: 12.2rem 0 0 0; }
     .design__section-description {
       font-size: 15px !important;
       max-width: 306px;
       line-height: 135.84%; }
-    .design-card__text {
-      margin: -12.45rem auto 0 0 !important;
-      max-width: 22.57rem !important; }
-    .design-card__pricetag {
-      padding: 1.014rem 5.4rem 1.214rem 2.5rem !important; } }
+    .design-card {
+      margin-bottom: 6.35rem !important; }
+      .design-card__text {
+        margin: -13.05rem auto 0 0 !important;
+        max-width: 22.77rem !important;
+        padding: 1.79rem 2.64rem; }
+      .design-card__pricetag {
+        padding: 1.014rem 5.4rem 1.214rem 2.5rem !important; } }
 
 .target {
   padding-top: 29.3rem;
@@ -1953,8 +1958,27 @@ svg path:hover {
       display: none; } }
 
 @media screen and (max-width: 450px) {
-  .team__row {
-    margin-left: 2rem; } }
+  .team {
+    padding-top: 0.1rem; }
+    .team__row {
+      margin-left: 3.2rem; }
+    .team__col {
+      min-width: 100%;
+      margin-bottom: 10.5rem; }
+    .team__section-description {
+      font-size: 13px;
+      margin-top: 1.2rem;
+      margin: 1.642rem auto 6.1rem auto; }
+    .team__image {
+      width: 95%;
+      max-height: 342px; }
+    .team-card__alex:after, .team-card__alice:after, .team-card__david:after {
+      top: -35px;
+      left: -35px;
+      width: 70px;
+      height: 70px; }
+    .team-card__text {
+      margin: -6rem auto 0 auto; } }
 
 .client {
   margin-top: 0;
@@ -2226,14 +2250,15 @@ svg path:hover {
 
 @media screen and (max-width: 450px) {
   .footer {
+    padding-top: 0;
     padding-bottom: 2rem;
     background: none;
     background-color: #131313; }
     .footer__title {
-      font-size: 1.728rem;
-      margin-bottom: 4.714rem; }
+      font-size: 1.628rem;
+      margin-bottom: 4.5rem; }
     .footer__input-group {
-      margin-bottom: 5.7rem; }
+      margin-bottom: 5.5rem; }
       .footer__input-group--full-width {
         margin-bottom: 0.5rem; }
     .footer__wrap {
@@ -2269,7 +2294,7 @@ svg path:hover {
     width: 39px;
     height: 39px; }
   .map {
-    height: 21.814rem;
+    height: 21.414rem;
     width: 66.07rem; } }
 
 @-webkit-keyframes rotation {
@@ -2350,13 +2375,13 @@ svg path:hover {
     .modal__input-group {
       display: flex;
       flex-direction: column;
-      margin-bottom: 3.482rem; }
+      margin-bottom: 2.482rem; }
       .modal__input-group--last {
         margin-bottom: 0; }
     .modal__input:focus {
       outline: none; }
     .modal__input:last-of-type {
-      margin-bottom: 1rem; }
+      margin-bottom: 0.4rem; }
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {
@@ -2571,34 +2596,62 @@ svg path:hover {
     width: 100%;
     margin: 0; }
   .hero__text {
-    font-size: 1.285rem;
-    max-width: 22.76rem; }
+    font-size: 1.495rem;
+    max-width: 26.7rem;
+    margin-bottom: 2.8rem; }
   .hero__button {
     font-size: 0.928rem;
     width: 100%;
     max-width: 100%; }
   .hero__title {
-    width: 60%; }
+    width: 60%;
+    font-size: 1.9rem; }
   .video__play {
-    width: 45px;
-    height: 45px;
-    background-size: 32%; }
+    margin: 0;
+    width: 36px;
+    height: 36px;
+    background-size: 25%; }
+  .control__section-title {
+    margin-bottom: 3.514rem; }
   .control__video {
-    min-height: 17rem; }
+    min-height: 17.1rem;
+    margin-bottom: 2.45rem; }
   .control__button {
     font-size: 1.13rem; }
+  .control__text {
+    line-height: 2rem;
+    margin-bottom: 2.585rem; }
+    .control__text:before {
+      margin-bottom: 1.2rem; }
+  .control__input::-webkit-input-placeholder {
+    font-size: 1.5rem; }
+  .control__input::-moz-placeholder {
+    font-size: 1.5rem; }
+  .control__input:-ms-input-placeholder {
+    font-size: 1.5rem; }
+  .control__input::-ms-input-placeholder {
+    font-size: 1.5rem; }
+  .control__input::placeholder {
+    font-size: 1.5rem; }
+  .control__policy {
+    margin-bottom: 5.2rem;
+    margin-top: 1rem; }
   .policy__label {
-    font-size: 1.142rem; }
+    font-size: 1.342rem; }
   .section-title__word {
     display: block;
     text-align: left; }
   .projects {
-    padding-top: 0; }
+    padding-top: 0;
+    padding-bottom: 23.2rem; }
     .projects__section-title {
-      text-align: left; }
+      text-align: left;
+      font-size: 1.75rem;
+      margin-bottom: 2.3rem; }
     .projects__section-description {
       text-align: left;
-      letter-spacing: 0.03rem; }
+      max-width: 88%;
+      line-height: 158.48%; }
     .projects__col-40 {
       min-width: auto;
       max-width: 100%; }
@@ -2607,30 +2660,56 @@ svg path:hover {
       top: 27.5rem;
       max-width: 100%; }
     .projects__navigation {
-      top: 86%;
+      top: 76%;
       margin-left: -70px;
       transform: translate(-30%, -50%); }
   .section-title__heading {
-    font-size: 1.97rem; }
+    font-size: 1.87rem;
+    line-height: 169.6%; }
   .section-description {
     font-size: 14px; }
   .swiper-slide__content {
     padding: 0; }
   .swiper-slide__heading {
-    font-size: 12px; }
+    font-size: 14px;
+    margin-bottom: 0.88rem; }
   .swiper-slide__text {
-    font-size: 12px; }
+    flex-basis: 47%;
+    font-size: 12px;
+    line-height: 135.84%; }
   .section-title--left {
     margin-bottom: 85%; }
-  .types__section-title {
-    margin-bottom: 3.1rem; }
-  .types__col-30 {
-    max-width: 100%; }
-  .types__text {
-    margin: -11.75rem auto 0 0;
-    max-width: 22rem; }
+  .types {
+    padding-top: 59px;
+    padding-bottom: 0;
+    margin-bottom: 0; }
+    .types__card {
+      margin-bottom: 7rem; }
+      .types__card--last {
+        margin-bottom: 6rem; }
+    .types__section-title {
+      margin-bottom: 3.1rem; }
+    .types__col-30 {
+      max-width: 100%; }
+    .types__text {
+      margin: -12.99rem auto 0 0;
+      max-width: 22.75rem; }
+  .card__text {
+    padding: 1.79rem 2.84rem; }
+  .card__list {
+    margin: 0 0 1.5rem 0;
+    line-height: 1.89rem; }
+  .card__pricetag {
+    padding: 1rem 2.6rem; }
   div.invalid__footer {
-    top: 43px; } }
+    top: 43px; }
+  .swiper-section-title {
+    margin-top: 0;
+    margin-bottom: 2.6rem; }
+  .swiper-slide-mob {
+    margin-bottom: -10.1rem; }
+  .modal__input-group--last {
+    margin-bottom: 0; } }
 
 .animateSectionTitle {
   -webkit-animation-name: slideRight;

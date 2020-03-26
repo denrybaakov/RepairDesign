@@ -248,26 +248,43 @@
       width: 100%
       margin: 0
     &__text
-      font-size: 1.285rem
-      max-width: 22.76rem
+      font-size: 1.495rem
+      max-width: 26.7rem
+      margin-bottom: 2.8rem
     &__button
       font-size: 0.928rem
       width: 100%
       max-width: 100%
     &__title
       width: 60%
+      font-size: 1.9rem
 
   .video__play
-    width: 45px
-    height: 45px
-    background-size: 32%
+    margin: 0
+    width: 36px
+    height: 36px
+    background-size: 25%
   .control
+    &__section-title
+      margin-bottom: 3.514rem
     &__video
-      min-height: 17rem
+      min-height: 17.1rem
+      margin-bottom: 2.45rem
     &__button
       font-size: 1.13rem
+    &__text
+      line-height: 2rem
+      margin-bottom: 2.585rem
+      &:before
+        margin-bottom: 1.2rem
+    &__input
+      &::placeholder
+        font-size: 1.5rem
+    &__policy
+      margin-bottom: 5.2rem
+      margin-top: 1rem
   .policy__label
-    font-size: 1.142rem
+    font-size: 1.342rem
 
   .section-title__word
     display: block
@@ -275,11 +292,15 @@
 
   .projects
     padding-top: 0
+    padding-bottom: 23.2rem
     &__section-title
       text-align: left
+      font-size: 1.75rem
+      margin-bottom: 2.3rem
     &__section-description
       text-align: left
-      letter-spacing: 0.03rem
+      max-width: 88%
+      line-height: 158.48%
     &__col-40
       min-width: auto
       max-width: 100%
@@ -289,14 +310,15 @@
       max-width: 100%
 
     &__navigation
-      top: 86%
+      top: 76% //86%
       // left: 38%
       // right: 50%
       margin-left: -70px
       transform: translate(-30%,-50%)
 
   .section-title__heading
-    font-size: 1.97rem
+    font-size: 1.87rem
+    line-height: 169.6%
   .section-description
     font-size: 14px
   .swiper
@@ -304,22 +326,51 @@
       &__content
         padding: 0
       &__heading
-        font-size: 12px
+        font-size: 14px
+        margin-bottom: 0.88rem
       &__text
+        flex-basis: 47%
         font-size: 12px
+        line-height: 135.84%
 
   .section
     &-title--left
       margin-bottom: 85% //24rem
 
   .types
+    padding-top: 59px
+    padding-bottom: 0
+    margin-bottom: 0
+    &__card
+      margin-bottom: 7rem
+      &--last
+        margin-bottom: 6rem
     &__section-title
       margin-bottom: 3.1rem
     &__col-30
       max-width: 100%
     &__text
-      margin: -11.75rem auto 0 0
-      max-width: 22rem
-
+      margin: -12.99rem auto 0 0
+      max-width: 22.75rem
+  .card
+    &__text
+      padding: 1.79rem 2.84rem
+    &__list
+      margin: 0 0 1.5rem 0
+      line-height: 1.89rem
+    &__pricetag
+      padding: 1rem 2.6rem
   div.invalid__footer
     top: 43px
+
+  .swiper
+    &-section-title
+      margin-top: 0
+      margin-bottom: 2.6rem
+    &-slide-mob
+      margin-bottom: -10.1rem
+
+  .modal
+    &__input-group
+      &--last
+        margin-bottom: 0
